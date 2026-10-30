@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "iov-identity-release-v1",
+  "release": "2026-10-23.beta.1",
+  "identityFlow": "iov-identity-flow-v1",
+  "contextSchemaVersion": "identity-context-v1",
+  "packages": {
+    "contracts": {
+      "version": "0.1.4",
+      "integrity": "sha512-FjylYXUWAU7rL+5YCyCbLkV/Cv8h7NdC0mPHE56TD8ltxS7lToArv58NwH0WaE/EHiKu5E6lZ9qzdCTcsub7Lg==",
+      "artifact": "vendor/theinternetofvalue-wellbeing-identity-contracts-0.1.4.tgz",
+      "upstream": "https://npm.pkg.github.com/download/@theinternetofvalue/wellbeing-identity-contracts/0.1.4/24f22ac65766f75606ca290abec5d63640c53fd4"
+    },
+    "renderer": {
+      "version": "0.2.5",
+      "integrity": "sha512-HsxylF5l+I3iX7LeEu1A3+lmL7w+otMajW0mn9Sragss2X2kP2tqai3lV/Tt+O0gRvcs6Tq7LJKXkYx2czptqw==",
+      "artifact": "vendor/theinternetofvalue-wellbeing-identity-renderer-0.2.5.tgz",
+      "upstream": "https://npm.pkg.github.com/download/@theinternetofvalue/wellbeing-identity-renderer/0.2.5/f09921bc063b8ce8069ca69ba0788fc383607c79"
+    }
+  },
+  "products": {
+    "foundation": {
+      "version": "0.2.0",
+      "renderer": true,
+      "metadataUrl": "https://theinternetofvalue.org/.well-known/iov-product.json"
+    },
+    "word-wallet": {
+      "version": "0.3.0",
+      "renderer": true,
+      "metadataUrl": "https://identity.theinternetofvalue.org/.well-known/iov-product.json"
+    },
+    "value-log": {
+      "version": "0.1.0",
+      "renderer": true,
+      "metadataUrl": "https://valuelog.theinternetofvalue.org/.well-known/iov-product.json"
+    },
+    "docs-site": {
+      "version": "0.1.0",
+      "renderer": true,
+      "metadataUrl": "https://theinternetofvalue.netlify.app/.well-known/iov-product.json"
+    }
+  },
+  "guardSha256": "7fdb61b65f1df5fa7f87d14a733d00faff87ccc6ced650f210380154f941685b"
+}

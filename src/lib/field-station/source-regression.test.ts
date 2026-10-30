@@ -1,0 +1,24 @@
+import { afterEach, expect, it, vi } from "vitest";
+import { encryptNarrative } from "@/lib/crypto";
+import { nativeOwnerScope, type NativeRow } from "@/lib/native-log/storage-core";
+import { newNativeDraft } from "@/lib/native-log/draft";
+import { resolveActivitySource } from "@/lib/cohort/sources";
+import { blindReviewInputs } from "@/lib/cohort/review-worker";
+import { accounts, activity, fixtureId, longCorrection } from "./fixtures";
+afterEach(() => vi.unstubAllEnvs());
+it("U17: long conversation stays in one immutable source and is resolved without truncation or wire duplication", () => {
+  vi.stubEnv("AUDIT_DIGEST_KEY", "synthetic-source-reference-key-more-than-32-characters");
+  vi.stubEnv("NARRATIVE_ENCRYPTION_KEY_BASE64", Buffer.alloc(32, 5).toString("base64"));
+  const owner = accounts.brosA.owner, draftId = fixtureId(800), replyId = fixtureId(801);
+  const document = { ...newNativeDraft(nativeOwnerScope(owner), "2026-10-26", "Asia/Kolkata", "personal"), revision: 7, transcript: "Synthetic walk source", conversation: [{ id: replyId, activityId: null, text: longCorrection }] };
+  const encrypted = encryptNarrative(JSON.stringify({ document, parts: {}, totalParts: null }));
+  const row: NativeRow = { id: draftId, revision: 8, status: "submitted", content_ciphertext: encrypted.ciphertext, content_iv: encrypted.iv, content_auth_tag: encrypted.authTag, content_digest: encrypted.digest, receipt: { kind: "cohort_review_pending", sourceReferenced: true, ids: [], dates: ["2026-10-26"], count: 1, timezone: "Asia/Kolkata" }, created_at: "2026-10-26T00:00:00Z", updated_at: "2026-10-26T00:00:00Z", removed_at: null };
+  const record = activity(1, { sourceReference: { draftId, documentRevision: 7, replyIds: [replyId] } });
+  const resolved = resolveActivitySource(owner, row, record);
+  expect(resolved.activity.followUpAnswers?.[0].text).toBe(longCorrection);
+  expect(resolved.source.replies).toHaveLength(1);
+  expect(JSON.stringify(blindReviewInputs([{ recordId: record.id, activity: resolved.activity }]))).not.toContain(longCorrection);
+  expect(resolveActivitySource(owner, { ...row, status: "removed", removed_at: "2026-10-27T00:00:00Z" }, record).source.replies[0].text).toBe(longCorrection);
+  expect(() => resolveActivitySource(accounts.brosB.owner, row, record)).toThrow("ACCOUNT_CHANGED");
+  expect(() => resolveActivitySource(owner, row, { ...record, sourceReference: { ...record.sourceReference!, documentRevision: 6 } })).toThrow("APPROVED_SOURCE_UNAVAILABLE");
+});

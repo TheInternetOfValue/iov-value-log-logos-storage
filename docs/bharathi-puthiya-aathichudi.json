@@ -1,0 +1,791 @@
+{
+  "title": "பாரதியின் புதிய ஆத்திசூடி",
+  "english_title": "Bharathi's Puthiya Aathichudi",
+  "version": "1.0.0",
+  "language": [
+    "ta",
+    "en"
+  ],
+  "item_count": 110,
+  "field_order": [
+    "number",
+    "புதிய ஆத்திசூடி",
+    "in English",
+    "எளிய பொருள்",
+    "explanation"
+  ],
+  "editorial_note": "The Tamil aphorisms are transcribed and Unicode-normalized from the uploaded A. Srinivasan commentary edition. The English lines are concise translations; the Tamil meanings and English explanations are interpretive, source-grounded modern readings. Entry 94 is explicitly marked as textually and semantically disputed.",
+  "source_note": "Primary basis: A. Srinivasan, பாரதியின் புதிய ஆத்திசூடி: ஒரு விளக்கவுரை, especially the 110-item list on PDF pages 17–19 and the accompanying commentary. Original-text spellings were cross-checked against Tamil Wikisource.",
+  "items": [
+    {
+      "number": 1,
+      "புதிய ஆத்திசூடி": "அச்சம் தவிர்",
+      "in English": "Cast off fear.",
+      "எளிய பொருள்": "பயம் உன் முடிவுகளையும் வாழ்க்கையையும் ஆள விடாதே.",
+      "explanation": "Fear may warn you, but it must not become your ruler; see danger clearly and still act when the cause is right."
+    },
+    {
+      "number": 2,
+      "புதிய ஆத்திசூடி": "ஆண்மை தவறேல்",
+      "in English": "Never forsake courage.",
+      "எளிய பொருள்": "துணிவு, மனவலிமை, நேர்மை ஆகியவற்றைக் கைவிடாதே.",
+      "explanation": "Here ஆண்மை means moral courage and firmness in its older ethical sense, not biological maleness or male superiority."
+    },
+    {
+      "number": 3,
+      "புதிய ஆத்திசூடி": "இளைத்தல் இகழ்ச்சி",
+      "in English": "Giving in to weariness is disgraceful.",
+      "எளிய பொருள்": "சிரமம் வந்தவுடன் சோர்ந்து பின்வாங்குவதை இயல்பாக்காதே.",
+      "explanation": "Bharathi is not rejecting necessary rest; he is attacking the habit of abandoning a worthy effort merely because it has become difficult."
+    },
+    {
+      "number": 4,
+      "புதிய ஆத்திசூடி": "ஈகைத்திறன்",
+      "in English": "Cultivate the power to give.",
+      "எளிய பொருள்": "பிறருடன் பகிரும் தாராள மனத்தையும் திறனையும் வளர்த்துக்கொள்.",
+      "explanation": "Generosity is a developed capacity involving resources, judgment, and the willingness to share what genuinely helps."
+    },
+    {
+      "number": 5,
+      "புதிய ஆத்திசூடி": "உடலினை உறுதி செய்",
+      "in English": "Make the body strong.",
+      "எளிய பொருள்": "உடலை ஆரோக்கியமாகவும் வலிமையாகவும் பேணி வளர்த்து கொள்.",
+      "explanation": "The body is the instrument through which thought becomes action, so nourish, train, rest, and care for it."
+    },
+    {
+      "number": 6,
+      "புதிய ஆத்திசூடி": "ஊண் மிக விரும்பு",
+      "in English": "Value nourishing food greatly.",
+      "எளிய பொருள்": "அளவுடன் நல்ல, சத்தான உணவை விருப்பத்துடன் உண்டு உடலைப் பேணி.",
+      "explanation": "This does not praise overeating; it urges delight in wholesome nourishment rather than neglect or careless eating."
+    },
+    {
+      "number": 7,
+      "புதிய ஆத்திசூடி": "எண்ணுவது உயர்வு",
+      "in English": "Let your thoughts be lofty.",
+      "எளிய பொருள்": "உன் எண்ணங்களையும் நோக்கங்களையும் உயர்வாக வைத்திரு.",
+      "explanation": "Repeated thought shapes attention and ambition, so occupy the mind with worthy possibilities rather than petty resentment."
+    },
+    {
+      "number": 8,
+      "புதிய ஆத்திசூடி": "ஏறுபோல் நட",
+      "in English": "Walk like a proud bull.",
+      "எளிய பொருள்": "நிமிர்ந்து, உறுதியுடனும் தன்னம்பிக்கையுடனும் நட.",
+      "explanation": "The bull represents grounded force and confidence: carry yourself upright, steady, and without servility."
+    },
+    {
+      "number": 9,
+      "புதிய ஆத்திசூடி": "ஐம்பொறி ஆட்சிகொள்",
+      "in English": "Govern the five senses.",
+      "எளிய பொருள்": "கண், காது, மூக்கு, நாக்கு, தொடுதல் ஆகிய புலன்களை விழிப்புடன் கட்டுப்படுத்து.",
+      "explanation": "Use the senses as sources of knowledge rather than allowing every sensation and impulse to command behavior."
+    },
+    {
+      "number": 10,
+      "புதிய ஆத்திசூடி": "ஒற்றுமை வலிமையாம்",
+      "in English": "Unity is strength.",
+      "எளிய பொருள்": "மக்கள் ஒன்றிணைந்து செயல்பட்டால் பெரிய வலிமை உருவாகும்.",
+      "explanation": "Trust, coordination, and shared purpose allow people to achieve what isolated effort cannot."
+    },
+    {
+      "number": 11,
+      "புதிய ஆத்திசூடி": "ஓய்தல் ஒழி",
+      "in English": "Put away idleness.",
+      "எளிய பொருள்": "சோம்பலையும் காரணமற்ற செயலின்மையையும் நீக்கு.",
+      "explanation": "Rest should renew action; it should not become a permanent excuse to avoid learning, work, or responsibility."
+    },
+    {
+      "number": 12,
+      "புதிய ஆத்திசூடி": "ஔடதம் குறை",
+      "in English": "Reduce the need for medicine.",
+      "எளிய பொருள்": "உடல்நலத்தைப் பேணி தேவையற்ற மருந்துச் சார்பைக் குறை.",
+      "explanation": "The line favors preventive health and should not be read as advice to reject necessary medical treatment."
+    },
+    {
+      "number": 13,
+      "புதிய ஆத்திசூடி": "கற்றதொழுகு",
+      "in English": "Live according to what you have learned.",
+      "எளிய பொருள்": "கற்ற நல்ல நெறிகளையும் அறிவையும் வாழ்க்கையில் நடைமுறைப்படுத்து.",
+      "explanation": "Knowledge becomes real only when it changes habit, judgment, character, and useful action."
+    },
+    {
+      "number": 14,
+      "புதிய ஆத்திசூடி": "காலம் அழியேல்",
+      "in English": "Do not waste time.",
+      "எளிய பொருள்": "உன் நேரத்தை வீணாக்காமல் பயனுள்ளதாக செலவு செய்.",
+      "explanation": "Time is the non-renewable material of life, though recovery, reflection, and relationships can also be valuable uses of it."
+    },
+    {
+      "number": 15,
+      "புதிய ஆத்திசூடி": "கிளைபல தாங்கேல்",
+      "in English": "Do not take on more dependants than you can sustain.",
+      "எளிய பொருள்": "நீ பொறுப்புடன் பேண முடியாத அளவுக்கு குடும்பச் சார்புகளையும் கடமைகளையும் பெருக்காதே.",
+      "explanation": "கிளை can mean branches, relatives, or dependants; the principle is to create only the obligations you can support with dignity."
+    },
+    {
+      "number": 16,
+      "புதிய ஆத்திசூடி": "கீழோர்க்கு அஞ்சேல்",
+      "in English": "Do not fear the morally base.",
+      "எளிய பொருள்": "தீய எண்ணம் கொண்டவர்களுக்கும் அநியாயம் செய்பவர்களுக்கும் அஞ்சாதே.",
+      "explanation": "கீழோர் is interpreted ethically, not by caste or class: do not be intimidated by cruel, dishonest, or oppressive conduct."
+    },
+    {
+      "number": 17,
+      "புதிய ஆத்திசூடி": "குன்றென நிமிர்ந்து நில்",
+      "in English": "Stand upright like a mountain.",
+      "எளிய பொருள்": "மலைபோல் நிமிர்ந்து நிலையான தன்னம்பிக்கையுடன் நில்.",
+      "explanation": "Develop a stable center so criticism, uncertainty, and pressure do not immediately collapse your principles."
+    },
+    {
+      "number": 18,
+      "புதிய ஆத்திசூடி": "கூடித் தொழில் செய்",
+      "in English": "Work together.",
+      "எளிய பொருள்": "மற்றவர்களுடன் இணைந்து ஒழுங்காக வேலை செய்.",
+      "explanation": "Collaboration requires shared information, divided responsibility, conflict resolution, and alignment around a common outcome."
+    },
+    {
+      "number": 19,
+      "புதிய ஆத்திசூடி": "கெடுப்பது சோர்வு",
+      "in English": "Discouragement destroys.",
+      "எளிய பொருள்": "மனச்சோர்வு தொடர்ந்து ஆட்சி செய்தால் முயற்சியும் வளர்ச்சியும் கெடும்.",
+      "explanation": "Fatigue may slow a person, but despair can end the undertaking; recover, seek help, change strategy, and continue."
+    },
+    {
+      "number": 20,
+      "புதிய ஆத்திசூடி": "கேட்டிலும் துணிந்து நில்",
+      "in English": "Stand brave even in adversity.",
+      "எளிய பொருள்": "கேடு, இழப்பு அல்லது வறுமை வந்தாலும் துணிவுடன் நில்.",
+      "explanation": "Courage matters most when circumstances deteriorate and dignity, judgment, and action are under pressure."
+    },
+    {
+      "number": 21,
+      "புதிய ஆத்திசூடி": "கைத்தொழில் போற்று",
+      "in English": "Honor skilled and productive work.",
+      "எளிய பொருள்": "கைவினை, தொழில், உற்பத்தித் திறன் ஆகியவற்றை மதித்து வளர்த்து கொள்.",
+      "explanation": "Bharathi rejects contempt for manual and technical labor and honors makers, farmers, workers, engineers, and craftspeople."
+    },
+    {
+      "number": 22,
+      "புதிய ஆத்திசூடி": "கொடுமையை எதிர்த்து நில்",
+      "in English": "Stand against cruelty.",
+      "எளிய பொருள்": "அநியாயம், அடக்குமுறை, வன்முறை ஆகியவற்றை எதிர்த்து நில்.",
+      "explanation": "Resistance should be courageous and proportionate, guided by justice rather than revenge."
+    },
+    {
+      "number": 23,
+      "புதிய ஆத்திசூடி": "கோல் கை கொண்டு வாழ்",
+      "in English": "Live with the staff of responsibility in hand.",
+      "எளிய பொருள்": "ஒழுக்கம், பொறுப்பு, தலைமை மற்றும் தற்காப்புத் தயார்ப்புடன் வாழ்.",
+      "explanation": "கோல் can signify a staff, authority, discipline, or protection; the line urges agency rather than helplessness."
+    },
+    {
+      "number": 24,
+      "புதிய ஆத்திசூடி": "கவ்வியதை விடேல்",
+      "in English": "Do not release what you have firmly taken up.",
+      "எளிய பொருள்": "தேர்ந்தெடுத்த நல்ல காரியத்தை நடுவில் கைவிடாதே.",
+      "explanation": "Once a worthy undertaking has been chosen carefully, persist until completion or until evidence justifies a conscious change."
+    },
+    {
+      "number": 25,
+      "புதிய ஆத்திசூடி": "சரித்திரத் தேர்ச்சி கொள்",
+      "in English": "Gain mastery of history.",
+      "எளிய பொருள்": "வரலாற்றை ஆழமாக அறிந்து அதன் வெற்றிகளிலும் தவறுகளிலும் இருந்து கற்றுக்கொள்.",
+      "explanation": "History reveals how institutions, conflicts, technologies, cultures, freedoms, and failures were produced over time."
+    },
+    {
+      "number": 26,
+      "புதிய ஆத்திசூடி": "சாவதற்கு அஞ்சேல்",
+      "in English": "Do not fear death.",
+      "எளிய பொருள்": "மரணப் பயத்தால் உண்மையையும் கடமையையும் கைவிடாதே.",
+      "explanation": "This is not recklessness; it means refusing to let fear of death make life cowardly or incapable of defending a just cause."
+    },
+    {
+      "number": 27,
+      "புதிய ஆத்திசூடி": "சிதையா நெஞ்சு கொள்",
+      "in English": "Possess an unbroken heart.",
+      "எளிய பொருள்": "அழுத்தத்திலும் தோல்வியிலும் உடையாத மனஉறுதியை வளர்த்துக்கொள்.",
+      "explanation": "Resilience is the ability to feel pain, learn, reorganize, and remain capable of love, thought, and action."
+    },
+    {
+      "number": 28,
+      "புதிய ஆத்திசூடி": "சீறுவோர்ச் சீறு",
+      "in English": "Rise fiercely against those who rage unjustly.",
+      "எளிய பொருள்": "அநியாயமாக மிரட்டுவோரைப் பயமின்றி உறுதியுடன் எதிர்த்து நில்.",
+      "explanation": "The line calls for disciplined moral force against intimidation, not random anger."
+    },
+    {
+      "number": 29,
+      "புதிய ஆத்திசூடி": "சுமையினுக்கு இளைத்திடேல்",
+      "in English": "Do not wilt beneath responsibility.",
+      "எளிய பொருள்": "பொறுப்பின் சுமையைக் கண்டு மனம் தளராதே.",
+      "explanation": "Large responsibilities should be planned and shared, but not automatically abandoned because they are heavy."
+    },
+    {
+      "number": 30,
+      "புதிய ஆத்திசூடி": "சூரரைப் போற்று",
+      "in English": "Honor the valiant.",
+      "எளிய பொருள்": "துணிவுடன் உயர்ந்த செயல்களைச் செய்பவர்களை மதித்து கற்றுக்கொள்.",
+      "explanation": "Celebrate courage that serves truth, freedom, knowledge, care, and the common good rather than fame alone."
+    },
+    {
+      "number": 31,
+      "புதிய ஆத்திசூடி": "செய்வது துணிந்து செய்",
+      "in English": "Whatever you do, do it boldly.",
+      "எளிய பொருள்": "நல்லது என்று தீர்மானித்த செயலைத் துணிந்து முழுமையாகச் செய்.",
+      "explanation": "After inquiry and decision, stop weakening action through endless hesitation; boldness should follow thought, not replace it."
+    },
+    {
+      "number": 32,
+      "புதிய ஆத்திசூடி": "சேர்க்கை அழியேல்",
+      "in English": "Do not let worthy associations fall apart.",
+      "எளிய பொருள்": "நல்ல உறவுகள், நட்புகள், கூட்டணிகள் ஆகியவற்றை அலட்சியமாக சிதைய விடாதே.",
+      "explanation": "Trust and community require maintenance through communication, repair, commitment, and mutual responsibility."
+    },
+    {
+      "number": 33,
+      "புதிய ஆத்திசூடி": "சைகையிற் பொருளுணர்",
+      "in English": "Understand meaning from gesture.",
+      "எளிய பொருள்": "வார்த்தைகளுக்கு அப்பால் முகபாவம், உடல்மொழி, சூழல் ஆகியவற்றையும் கவனி.",
+      "explanation": "Human communication includes tone, silence, posture, timing, and context, though signals should be checked rather than blindly assumed."
+    },
+    {
+      "number": 34,
+      "புதிய ஆத்திசூடி": "சொல்வது தெளிந்து சொல்",
+      "in English": "Speak with clarity.",
+      "எளிய பொருள்": "சொல்ல வேண்டியதை அறிந்து குழப்பமின்றித் தெளிவாகச் சொல்.",
+      "explanation": "Clear speech requires clear thought, responsible words, and a distinction between fact, inference, and opinion."
+    },
+    {
+      "number": 35,
+      "புதிய ஆத்திசூடி": "சோதிடம் தனையிகழ்",
+      "in English": "Reject astrology.",
+      "எளிய பொருள்": "ஆதாரமற்ற சோதிடக் கணிப்புகள் உன் முடிவுகளை ஆள விடாதே.",
+      "explanation": "Bharathi challenges fatalism and unsupported prediction, asking people to rely on evidence, causation, and human agency."
+    },
+    {
+      "number": 36,
+      "புதிய ஆத்திசூடி": "சௌரியம் தவறேல்",
+      "in English": "Never fail in valor.",
+      "எளிய பொருள்": "வீரத்தையும் செயல் துணிவையும் கைவிடாதே.",
+      "explanation": "சௌரியம் is active courage in danger or difficulty, and it must be joined with intelligence, restraint, and moral direction."
+    },
+    {
+      "number": 37,
+      "புதிய ஆத்திசூடி": "ஞமலி போல் வாழேல்",
+      "in English": "Do not live slavishly, like a dog.",
+      "எளிய பொருள்": "பிறர் எச்சத்தையும் கட்டளையையும் மட்டுமே எதிர்பார்த்து அடிமைத்தனமாக வாழாதே.",
+      "explanation": "The historical metaphor criticizes dependence and servility, not animals; build the capability and dignity to direct your own life."
+    },
+    {
+      "number": 38,
+      "புதிய ஆத்திசூடி": "ஞாயிறு போற்று",
+      "in English": "Revere the sun.",
+      "எளிய பொருள்": "சூரியன் தரும் ஒளி, ஆற்றல், காலஒழுங்கு, உயிர்ப்பு ஆகியவற்றை மதித்து வாழ்.",
+      "explanation": "The sun represents energy, clarity, regularity, and the ecological basis of life."
+    },
+    {
+      "number": 39,
+      "புதிய ஆத்திசூடி": "ஞிமிரென இன்புறு",
+      "in English": "Rejoice like the bee.",
+      "எளிய பொருள்": "தேனீபோல் சுறுசுறுப்பாக உழைத்து, ஒத்துழைத்து, வாழ்வின் இனிமையை அனுபவி.",
+      "explanation": "ஞிமிர் refers to the bee or its humming, joining joyful activity, useful labor, and contribution to a larger living system."
+    },
+    {
+      "number": 40,
+      "புதிய ஆத்திசூடி": "ஞெகிழ்வதருளின்",
+      "in English": "To be moved with compassion is grace.",
+      "எளிய பொருள்": "பிறர் துன்பத்தைக் கண்டு மனம் நெகிழ்ந்து உதவுவதே அருள்.",
+      "explanation": "Grace appears when another's pain can enter awareness, soften the heart, and become intelligent help."
+    },
+    {
+      "number": 41,
+      "புதிய ஆத்திசூடி": "ஞேயங் காத்தல் செய்",
+      "in English": "Guard what is worthy of love and knowledge.",
+      "எளிய பொருள்": "அறிவு, அன்பு, நட்பு மற்றும் நம்பிக்கைக்குரிய உறவுகளைப் பாதுகாத்து வளர்த்து கொள்.",
+      "explanation": "ஞேயம் can refer to what is known, loved, or held dear, so protect valuable knowledge and bonds from neglect and betrayal."
+    },
+    {
+      "number": 42,
+      "புதிய ஆத்திசூடி": "தன்மையிழவேல்",
+      "in English": "Do not lose your true character.",
+      "எளிய பொருள்": "உன் நல்ல இயல்பையும் மனிதத் தன்மையையும் கைவிடாதே.",
+      "explanation": "Adapt methods when necessary, but do not trade away integrity, compassion, self-respect, and core purpose."
+    },
+    {
+      "number": 43,
+      "புதிய ஆத்திசூடி": "தாழ்ந்து நடவேல்",
+      "in English": "Do not conduct yourself in servility.",
+      "எளிய பொருள்": "தாழ்வு மனப்பான்மையால் உன்னைச் சிறுமைப்படுத்திக் கொண்டு நடக்காதே.",
+      "explanation": "This rejects humiliation and self-erasure, not humility, courtesy, or the willingness to learn."
+    },
+    {
+      "number": 44,
+      "புதிய ஆத்திசூடி": "திருவினை வென்று வாழ்",
+      "in English": "Win prosperity through worthy action and live well.",
+      "எளிய பொருள்": "முயற்சியால் கல்வி, செல்வம், நலம் போன்ற வளங்களைப் பெற்று வறுமையை வென்று வாழ்.",
+      "explanation": "The attached commentary reads திரு as prosperity in many forms, not money alone, and urges capable action toward flourishing."
+    },
+    {
+      "number": 45,
+      "புதிய ஆத்திசூடி": "தீயோர்க்கு அஞ்சேல்",
+      "in English": "Do not fear evildoers.",
+      "எளிய பொருள்": "தீமை செய்பவர்களையும் அநியாய அதிகாரத்தையும் கண்டு அஞ்சாதே.",
+      "explanation": "Protect yourself intelligently, build alliances, document truth, and resist harmful conduct without becoming cruel yourself."
+    },
+    {
+      "number": 46,
+      "புதிய ஆத்திசூடி": "துன்பம் மறந்திடு",
+      "in English": "Let suffering pass from your grip.",
+      "எளிய பொருள்": "கடந்த துன்பத்தை மீண்டும் மீண்டும் பற்றிக்கொண்டு வாழ்க்கையை முடக்காதே.",
+      "explanation": "Forgetting here means refusing to keep pain permanently alive as identity or bitterness, not denying trauma or its lessons."
+    },
+    {
+      "number": 47,
+      "புதிய ஆத்திசூடி": "தூற்றுதல் ஒழி",
+      "in English": "Give up slander.",
+      "எளிய பொருள்": "பிறரை ஆதாரமின்றிப் பழித்தல், அவதூறு செய்தல், இழிவுபடுத்தல் ஆகியவற்றை நிறுத்து.",
+      "explanation": "Criticism may be necessary, but reputation should not be injured through careless or malicious speech."
+    },
+    {
+      "number": 48,
+      "புதிய ஆத்திசூடி": "தெய்வம் நீ என்றுணர்",
+      "in English": "Know the divine within yourself.",
+      "எளிய பொருள்": "உன்னுள் அறிவும் படைப்பாற்றலும் பொறுப்பும் உள்ளன என்பதை உணர்.",
+      "explanation": "The line raises human dignity and agency: awaken the light, creativity, courage, and ethical responsibility attributed to the divine."
+    },
+    {
+      "number": 49,
+      "புதிய ஆத்திசூடி": "தேசத்தைக் காத்தல் செய்",
+      "in English": "Protect the nation.",
+      "எளிய பொருள்": "நாட்டின் சுதந்திரம், மக்கள் நலம், இயற்கை, நீதி, பண்பாடு ஆகியவற்றைக் காப்பாற்று.",
+      "explanation": "A nation includes people, institutions, freedoms, shared resources, and the conditions in which future generations can flourish."
+    },
+    {
+      "number": 50,
+      "புதிய ஆத்திசூடி": "தையலை உயர்வு செய்",
+      "in English": "Uplift women.",
+      "எளிய பொருள்": "பெண்களின் கல்வி, உரிமை, சுதந்திரம், மரியாதை, வாய்ப்புகளை உயர்த்து.",
+      "explanation": "தையல் is an older word for woman; the command is structural equality, not ceremonial praise."
+    },
+    {
+      "number": 51,
+      "புதிய ஆத்திசூடி": "தொன்மைக்கு அஞ்சேல்",
+      "in English": "Do not be intimidated by antiquity.",
+      "எளிய பொருள்": "பழமையானது என்பதற்காக கண்மூடித்தனமாக அஞ்சவோ ஏற்கவோ வேண்டாம்; ஆராய்ந்து புரிந்துகொள்.",
+      "explanation": "Study old texts and customs confidently, preserving insight, exposing error, and renewing what remains valuable."
+    },
+    {
+      "number": 52,
+      "புதிய ஆத்திசூடி": "தோல்வியிற் கலங்கேல்",
+      "in English": "Do not be shaken by failure.",
+      "எளிய பொருள்": "தோல்வி வந்ததும் பதறி உன் முயற்சியையும் நம்பிக்கையையும் கைவிடாதே.",
+      "explanation": "Treat failure as information about method, timing, assumptions, or conditions, then learn and attempt the next intelligent move."
+    },
+    {
+      "number": 53,
+      "புதிய ஆத்திசூடி": "தவத்தினை நிதம் புரி",
+      "in English": "Practise disciplined austerity every day.",
+      "எளிய பொருள்": "ஒருமுகம், ஒழுக்கம், சுயக்கட்டுப்பாடு ஆகியவற்றை தினமும் பயிற்சி செய்.",
+      "explanation": "தவம் can mean sustained disciplined practice that concentrates energy, reduces distraction, and trains desire toward a chosen purpose."
+    },
+    {
+      "number": 54,
+      "புதிய ஆத்திசூடி": "நன்று கருது",
+      "in English": "Think toward the good.",
+      "எளிய பொருள்": "நல்ல நோக்கத்துடன் சிந்தித்து நல்லதைச் செய்ய முனை.",
+      "explanation": "Intention alone is insufficient, but it directs attention toward what is beneficial, just, life-giving, and worth building."
+    },
+    {
+      "number": 55,
+      "புதிய ஆத்திசூடி": "நாளெல்லாம் வினை செய்",
+      "in English": "Fill the day with purposeful action.",
+      "எளிய பொருள்": "ஒவ்வொரு நாளிலும் பயனுள்ள வேலை, கற்றல், பராமரிப்பு அல்லது சேவை செய்.",
+      "explanation": "The line praises active living, not frantic busyness; purposeful recovery, relationship, and reflection also count."
+    },
+    {
+      "number": 56,
+      "புதிய ஆத்திசூடி": "நினைப்பது முடியும்",
+      "in English": "What is truly envisioned can be accomplished.",
+      "எளிய பொருள்": "தெளிவான நோக்கம், திட்டம், தொடர்ந்த முயற்சி இருந்தால் பல இலக்குகளை நிறைவேற்றலாம்.",
+      "explanation": "This is not magical thinking; thought becomes powerful when it organizes learning, planning, cooperation, and repeated action."
+    },
+    {
+      "number": 57,
+      "புதிய ஆத்திசூடி": "நீதிநூல் பயில்",
+      "in English": "Study works of justice and ethics.",
+      "எளிய பொருள்": "நீதி, நியாயம், ஒழுக்கம், சமூகப் பொறுப்பு பற்றிய நூல்களைப் படி.",
+      "explanation": "Good intention needs tested reasoning about duty, rights, fairness, power, punishment, compassion, and the common good."
+    },
+    {
+      "number": 58,
+      "புதிய ஆத்திசூடி": "நுனியளவு செல்",
+      "in English": "Go all the way to the finest point.",
+      "எளிய பொருள்": "ஒரு செயலை அரைகுறையாக விடாமல் அதன் நுணுக்கம் மற்றும் நிறைவு வரை கொண்டு செல்.",
+      "explanation": "Follow work into detail, test the edges, refine weak points, and finish with care."
+    },
+    {
+      "number": 59,
+      "புதிய ஆத்திசூடி": "நூலினைப் பகுத்துணர்",
+      "in English": "Analyse a text before accepting it.",
+      "எளிய பொருள்": "படித்ததை அப்படியே நம்பாமல் அதன் கருத்து, ஆதாரம், சூழல், வரம்புகளை ஆராய்ந்து புரிந்துகொள்.",
+      "explanation": "Separate argument from authority, evidence from assertion, enduring insight from prejudice, and the author's meaning from your projection."
+    },
+    {
+      "number": 60,
+      "புதிய ஆத்திசூடி": "நெற்றி சுருக்கிடேல்",
+      "in English": "Do not live with a furrowed brow.",
+      "எளிய பொருள்": "தேவையற்ற கவலை, கோபம், குறை கூறுதல் ஆகியவற்றை முகத்தின் நிரந்தர நிலையாக மாற்றாதே.",
+      "explanation": "Meet problems seriously without making anxiety, irritability, or habitual gloom your permanent way of being."
+    },
+    {
+      "number": 61,
+      "புதிய ஆத்திசூடி": "நேர்படப் பேசு",
+      "in English": "Speak directly and honestly.",
+      "எளிய பொருள்": "சுற்றிவளைத்துப் பொய் பேசாமல் உண்மையை நேராகவும் மரியாதையுடனும் சொல்.",
+      "explanation": "Directness reduces manipulation and confusion, but it should be joined with timing, evidence, proportion, and care."
+    },
+    {
+      "number": 62,
+      "புதிய ஆத்திசூடி": "நையப்புடை",
+      "in English": "Strike decisively; carry the task through completely.",
+      "எளிய பொருள்": "செய்ய வேண்டியதை அரைமுறையாக அல்லாமல் முழு வலிமையுடனும் நிறைவுடனும் செய்.",
+      "explanation": "Literally the phrase suggests beating something thoroughly; the attached commentary extends it into a rule against weak or incomplete execution."
+    },
+    {
+      "number": 63,
+      "புதிய ஆத்திசூடி": "நொந்தது சாகும்",
+      "in English": "What has hurt will eventually pass.",
+      "எளிய பொருள்": "துன்பம் நிரந்தரமல்ல; அதை மீண்டும் மீண்டும் உயிர்ப்பித்து பிடித்துக் கொள்ளாதே.",
+      "explanation": "Pain changes or loses force over time, so do not continually renew an old wound through rumination."
+    },
+    {
+      "number": 64,
+      "புதிய ஆத்திசூடி": "நோற்பது கைவிடேல்",
+      "in English": "Do not abandon the discipline you have undertaken.",
+      "எளிய பொருள்": "நல்ல நோக்கத்துடன் ஏற்ற விரதம், பயிற்சி, ஒழுக்கம் ஆகியவற்றை நடுவில் கைவிடாதே.",
+      "explanation": "A vow builds character only when it survives inconvenience, though it may still be reviewed intelligently."
+    },
+    {
+      "number": 65,
+      "புதிய ஆத்திசூடி": "பணத்தினைப் பெருக்கு",
+      "in English": "Increase productive wealth.",
+      "எளிய பொருள்": "நேர்மையான உழைப்பு, திறன், தொழில், சேமிப்பு மூலம் செல்வத்தை வளர்த்து பயனுள்ள வழியில் பயன்படுத்து.",
+      "explanation": "Bharathi rejects romanticizing poverty and favors productive capability and wealth that supports human and social flourishing."
+    },
+    {
+      "number": 66,
+      "புதிய ஆத்திசூடி": "பாட்டினில் அன்பு செய்",
+      "in English": "Love song and music.",
+      "எளிய பொருள்": "இசை, பாடல், கவிதை ஆகியவற்றை அன்புடன் கற்று ரசித்து வளர்த்து கொள்.",
+      "explanation": "Music develops feeling, memory, rhythm, collective identity, and aesthetic intelligence."
+    },
+    {
+      "number": 67,
+      "புதிய ஆத்திசூடி": "பிணத்தினைப் போற்றேல்",
+      "in English": "Do not worship what is lifeless.",
+      "எளிய பொருள்": "உயிரும் பயனும் இழந்த பழக்கம், அமைப்பு, கருத்தை வெறும் பழமையால் போற்றாதே.",
+      "explanation": "The corpse is a metaphor for forms whose living purpose has disappeared; respect memory without preserving dead structures at the expense of life."
+    },
+    {
+      "number": 68,
+      "புதிய ஆத்திசூடி": "பீழைக்கு இடங்கொடேல்",
+      "in English": "Give no room to affliction or oppression.",
+      "எளிய பொருள்": "நோய், துன்புறுத்தல், அடக்குமுறை ஆகியவை வேரூன்ற இடம் கொடுக்காதே.",
+      "explanation": "Prevent suffering where possible, respond early, and resist systems that normalize harm, without blaming individuals for every hardship."
+    },
+    {
+      "number": 69,
+      "புதிய ஆத்திசூடி": "புதியன விரும்பு",
+      "in English": "Welcome the new.",
+      "எளிய பொருள்": "நன்மை தரும் புதிய சிந்தனை, அறிவு, தொழில்நுட்பம், வாழ்க்கை முறைகளை திறந்த மனத்துடன் அணுகு.",
+      "explanation": "Novelty is not automatically good, but fear of novelty blocks learning and adaptation; test the new against evidence and ethics."
+    },
+    {
+      "number": 70,
+      "புதிய ஆத்திசூடி": "பூமியிழந்திடேல்",
+      "in English": "Do not lose the land.",
+      "எளிய பொருள்": "உன் நிலம், நாடு, இயற்கை வளம் மற்றும் வாழ்விடங்களை காப்பாற்று.",
+      "explanation": "Land is tied to freedom, livelihood, identity, sovereignty, and today also to ecological stewardship."
+    },
+    {
+      "number": 71,
+      "புதிய ஆத்திசூடி": "பெரிதினும் பெரிது கேள்",
+      "in English": "Ask for what is greater than the great.",
+      "எளிய பொருள்": "சிறிய இலக்குகளில் முடங்காமல் மனித நலனுக்கான இன்னும் உயர்ந்த இலக்குகளை நோக்கு.",
+      "explanation": "Ambition should expand beyond status and private gain toward larger freedom, knowledge, beauty, justice, and collective capacity."
+    },
+    {
+      "number": 72,
+      "புதிய ஆத்திசூடி": "பேய்களுக்கஞ்சேல்",
+      "in English": "Do not fear ghosts.",
+      "எளிய பொருள்": "ஆதாரமற்ற மூடநம்பிக்கை மற்றும் கற்பனைப் பயங்கள் உன்னை ஆள விடாதே.",
+      "explanation": "Investigate causes, seek evidence, and distinguish real danger from inherited or manufactured superstition."
+    },
+    {
+      "number": 73,
+      "புதிய ஆத்திசூடி": "பொய்மை இகழ்",
+      "in English": "Despise falsehood.",
+      "எளிய பொருள்": "பொய், போலித்தனம், ஏமாற்றம் ஆகியவற்றை ஏற்காமல் விலக்கு.",
+      "explanation": "Falsehood damages knowledge and trust, including comforting stories that survive only because they are not examined."
+    },
+    {
+      "number": 74,
+      "புதிய ஆத்திசூடி": "போர்த்தொழில் பழகு",
+      "in English": "Train in the arts of defence and war.",
+      "எளிய பொருள்": "உடல் தற்காப்பு, ஒழுக்கம், தந்திரம், பேரிடர் தயார்ப்பு ஆகியவற்றைப் பயிற்சி செய்.",
+      "explanation": "A modern reading can emphasize disciplined self-defence, strategy, civic protection, and crisis readiness rather than aggression or conquest."
+    },
+    {
+      "number": 75,
+      "புதிய ஆத்திசூடி": "மந்திரம் வலிமை",
+      "in English": "A charged word or mantra has power.",
+      "எளிய பொருள்": "மீண்டும் மீண்டும் நோக்கத்துடன் சொல்லப்படும் சொல் மனத்தையும் செயலையும் வடிவமைக்க முடியும்.",
+      "explanation": "Language directs attention and collective emotion, and gains force through meaning, repetition, conviction, and organized action."
+    },
+    {
+      "number": 76,
+      "புதிய ஆத்திசூடி": "மானம் போற்று",
+      "in English": "Honor dignity.",
+      "எளிய பொருள்": "உன் சுயமரியாதையையும் பிறரின் மனித கண்ணியத்தையும் காப்பாற்று.",
+      "explanation": "Dignity is neither vanity nor brittle pride; it rejects both accepting degradation and degrading others."
+    },
+    {
+      "number": 77,
+      "புதிய ஆத்திசூடி": "மிடிமையில் அழிந்திடேல்",
+      "in English": "Do not let poverty destroy you.",
+      "எளிய பொருள்": "வறுமை வந்தாலும் மனம், திறன், கண்ணியம், முயற்சி ஆகியவற்றை இழந்துவிடாதே.",
+      "explanation": "மிடிமை means poverty or deprivation, and the line calls for capability, solidarity, productive work, and conditions that enable recovery."
+    },
+    {
+      "number": 78,
+      "புதிய ஆத்திசூடி": "மீளுமாறு உணர்ந்து கொள்",
+      "in English": "Learn how to recover.",
+      "எளிய பொருள்": "தவறு, நோய், தோல்வி, இழப்பு ஆகியவற்றிலிருந்து மீள்வதற்கான வழிகளை அறிந்துகொள்.",
+      "explanation": "Know how to rest, repair, ask for help, rebuild resources, change strategy, and return without blindly repeating the same failure."
+    },
+    {
+      "number": 79,
+      "புதிய ஆத்திசூடி": "முனையிலே முகத்து நில்",
+      "in English": "Stand at the front of the challenge.",
+      "எளிய பொருள்": "சிரமமான செயலில் பொறுப்பைத் தவிர்க்காமல் முன்வரிசையில் நில்.",
+      "explanation": "Leadership means facing the risk and work you ask others to face rather than hiding behind title or distance."
+    },
+    {
+      "number": 80,
+      "புதிய ஆத்திசூடி": "மூப்பினுக்கு இடங்கொடேல்",
+      "in English": "Do not surrender your vitality to age.",
+      "எளிய பொருள்": "வயதை காரணம் காட்டிச் சோராமல் உடல், மனம், ஆர்வம், கற்றலைப் பேணி.",
+      "explanation": "Aging is real, but it need not mean premature inward retirement from learning, movement, contribution, and curiosity."
+    },
+    {
+      "number": 81,
+      "புதிய ஆத்திசூடி": "மெல்லத் தெரிந்து சொல்",
+      "in English": "Understand patiently before you speak.",
+      "எளிய பொருள்": "ஒரு விஷயத்தை நிதானமாக ஆராய்ந்து தெரிந்த பிறகே கருத்து சொல்.",
+      "explanation": "Slow down enough to verify, mark uncertainty, hear other perspectives, and avoid making confidence a substitute for knowledge."
+    },
+    {
+      "number": 82,
+      "புதிய ஆத்திசூடி": "மேழி போற்று",
+      "in English": "Honor the plough.",
+      "எளிய பொருள்": "விவசாயம், உழவர், நிலம், உணவு உற்பத்தி ஆகியவற்றை மதித்து காப்பாற்று.",
+      "explanation": "மேழி is the plough, reminding urban society of its dependence on soil, water, seed, farming knowledge, and agricultural labor."
+    },
+    {
+      "number": 83,
+      "புதிய ஆத்திசூடி": "மொய்ம்புறத் தவஞ் செய்",
+      "in English": "Practise discipline that builds strength.",
+      "எளிய பொருள்": "உடல் மற்றும் மனவலிமை பெருகும் வகையில் ஒழுக்கமான தவப்பயிற்சி செய்.",
+      "explanation": "மொய்ம்பு carries the sense of strength or vigor; disciplined practice should enlarge capacity rather than become self-punishment."
+    },
+    {
+      "number": 84,
+      "புதிய ஆத்திசூடி": "மோனம் போற்று",
+      "in English": "Honor silence.",
+      "எளிய பொருள்": "எப்போது பேச வேண்டும், எப்போது அமைதியாக கவனிக்க வேண்டும் என்பதை அறிந்துகொள்.",
+      "explanation": "Silence creates space for observation and regulation, but must not become complicity when truth or protection requires speech."
+    },
+    {
+      "number": 85,
+      "புதிய ஆத்திசூடி": "மௌட்டியம் தனைக் கொல்",
+      "in English": "Destroy stupidity and ignorance.",
+      "எளிய பொருள்": "அறியாமை, சிந்திக்காமை, பிடிவாத முட்டாள்தனம் ஆகியவற்றை கல்வி மற்றும் ஆய்வால் நீக்கு.",
+      "explanation": "The target is not people with less schooling, but the refusal to learn, question, update, or reason."
+    },
+    {
+      "number": 86,
+      "புதிய ஆத்திசூடி": "யவனர் போல் முயற்சி செய்",
+      "in English": "Strive with the organized vigor Bharathi saw in the Yavanas.",
+      "எளிய பொருள்": "ஒழுங்கு, அறிவியல் மனப்பான்மை, தொழில்திறன், விடாமுயற்சி ஆகியவற்றுடன் செயல் படு.",
+      "explanation": "யவனர் is historical language for foreigners or Western peoples; the point is to learn disciplined scientific, industrial, and organizational effort, not to assert racial superiority."
+    },
+    {
+      "number": 87,
+      "புதிய ஆத்திசூடி": "யாரையும் மதித்து வாழ்",
+      "in English": "Live with respect for everyone.",
+      "எளிய பொருள்": "பிறப்பு, பாலினம், தொழில், செல்வம், மதம் எதுவாக இருந்தாலும் மனிதரை மரியாதையுடன் நடத்து.",
+      "explanation": "Universal respect preserves human dignity even while allowing firm disagreement, boundaries, and resistance to harm."
+    },
+    {
+      "number": 88,
+      "புதிய ஆத்திசூடி": "யௌவனம் காத்தல் செய்",
+      "in English": "Preserve youthful vitality.",
+      "எளிய பொருள்": "உடல் சுறுசுறுப்பு, ஆர்வம், கற்றல் விருப்பம், படைப்பாற்றல் ஆகியவற்றைப் பேணி.",
+      "explanation": "Youthfulness here is a quality of energy and openness, not a denial of age."
+    },
+    {
+      "number": 89,
+      "புதிய ஆத்திசூடி": "ரசத்திலே தேர்ச்சி கொள்",
+      "in English": "Develop mastery of aesthetic feeling.",
+      "எளிய பொருள்": "கலை, இலக்கியம், இசை, உணர்ச்சி நுணுக்கம் ஆகியவற்றை ஆழமாக ரசிக்கக் கற்றுக்கொள்.",
+      "explanation": "ரசம் is cultivated sensitivity to mood, form, beauty, emotion, and meaning, not entertainment alone."
+    },
+    {
+      "number": 90,
+      "புதிய ஆத்திசூடி": "ராஜசம் பயில்",
+      "in English": "Cultivate dynamic, spirited energy.",
+      "எளிய பொருள்": "உற்சாகம், செயலாற்றல், தன்னம்பிக்கை, தலைமைத் தன்மை ஆகியவற்றை வளர்த்துக்கொள்.",
+      "explanation": "ராஜசம் suggests energy, movement, ambition, and force, which should be disciplined by clarity and ethics."
+    },
+    {
+      "number": 91,
+      "புதிய ஆத்திசூடி": "ரீதி தவறேல்",
+      "in English": "Do not depart from sound method.",
+      "எளிய பொருள்": "சரியான முறை, ஒழுங்கு, நெறி, செயல்முறை ஆகியவற்றை அலட்சியமாக மீறாதே.",
+      "explanation": "Good intentions fail when processes are careless; respect methods that protect quality, fairness, safety, accountability, and repeatability."
+    },
+    {
+      "number": 92,
+      "புதிய ஆத்திசூடி": "ருசி பல வென்றுணர்",
+      "in English": "Experience many tastes and master them.",
+      "எளிய பொருள்": "பல சுவைகளையும் அனுபவங்களையும் அறிந்தாலும் அவற்றின் ஆசைக்கு அடிமையாகாதே.",
+      "explanation": "The attached commentary emphasizes self-control: develop breadth of taste while retaining freedom from appetite."
+    },
+    {
+      "number": 93,
+      "புதிய ஆத்திசூடி": "ரூபம் செம்மை செய்",
+      "in English": "Refine form and presentation.",
+      "எளிய பொருள்": "உடல், தோற்றம், வடிவமைப்பு, வெளிப்பாடு ஆகியவற்றை ஒழுங்காகவும் பொருத்தமாகவும் செம்மைப்படுத்து.",
+      "explanation": "Care for health, cleanliness, craft, design, and presentation without reducing human worth to appearance."
+    },
+    {
+      "number": 94,
+      "புதிய ஆத்திசூடி": "ரேகையிற் கனி கொள்",
+      "in English": "Draw valuable yield from the vein or line.",
+      "எளிய பொருள்": "ரேகை அல்லது தாதுப்படிவத்தில் இருந்து பயனைக் கண்டெடு; இவ்வரியின் துல்லியப் பொருள் விவாதத்திற்குரியது.",
+      "explanation": "This line is genuinely disputed: one strong industrial reading treats ரேகை as a mineral vein and கனி as valuable ore, while others connect it to drawing, design, or gaining fruit from a defined line."
+    },
+    {
+      "number": 95,
+      "புதிய ஆத்திசூடி": "ரோதனம் தவிர்",
+      "in English": "Avoid habitual lamentation.",
+      "எளிய பொருள்": "அழுகை மற்றும் புலம்பலை நிரந்தர வாழ்வுமுறையாக மாற்றாதே.",
+      "explanation": "Grief and tears are human, but repetitive helpless lament should not replace response, repair, resistance, or renewed action."
+    },
+    {
+      "number": 96,
+      "புதிய ஆத்திசூடி": "ரௌத்திரம் பழகு",
+      "in English": "Train righteous anger.",
+      "எளிய பொருள்": "அநியாயத்தைக் கண்டு எழும் கோபத்தை கட்டுப்பாட்டுடன் நீதிக்கான செயலாக மாற்றக் கற்றுக்கொள்.",
+      "explanation": "Convert moral outrage into clear speech, protection, organization, boundaries, and effective resistance rather than indiscriminate harm."
+    },
+    {
+      "number": 97,
+      "புதிய ஆத்திசூடி": "லவம்பல வெள்ளமாம்",
+      "in English": "Many tiny drops become a flood.",
+      "எளிய பொருள்": "சிறிய சேமிப்புகள் மற்றும் தொடர்ந்த சிறு முயற்சிகள் சேர்ந்து பெரிய விளைவை உருவாக்கும்.",
+      "explanation": "Large transformations are often accumulations of small repeated acts across time and people."
+    },
+    {
+      "number": 98,
+      "புதிய ஆத்திசூடி": "லாகவம் பயிற்சி செய்",
+      "in English": "Practise agility and graceful skill.",
+      "எளிய பொருள்": "ஒரு செயலை சாமர்த்தியமாக, இலகுவாக, துல்லியமாகச் செய்ய தொடர்ந்து பயிற்சி செய்.",
+      "explanation": "லாகவம் combines lightness, dexterity, ease, and elegance, usually built through repetition and reduced wasted movement."
+    },
+    {
+      "number": 99,
+      "புதிய ஆத்திசூடி": "லீலை இவ்வுலகு",
+      "in English": "This world is a vast play.",
+      "எளிய பொருள்": "வாழ்க்கையின் மாற்றங்களை முழு ஈடுபாட்டுடன் சந்தித்தாலும் அவற்றைப் பற்றிக் கடுமையாகப் பிணையாதே.",
+      "explanation": "Participate seriously and responsibly while remembering that roles, victories, losses, and conditions continually change."
+    },
+    {
+      "number": 100,
+      "புதிய ஆத்திசூடி": "உலுத்தரை இகழ்",
+      "in English": "Reject the miserly and uselessly selfish spirit.",
+      "எளிய பொருள்": "செல்வத்தையும் திறனையும் பயனின்றி குவித்து பிறருக்கு உதவாத கஞ்சத்தனத்தை இகழ்.",
+      "explanation": "The target is sterile hoarding and self-absorption, not prudent saving; resources gain social meaning through useful circulation."
+    },
+    {
+      "number": 101,
+      "புதிய ஆத்திசூடி": "உலோக நூல் கற்றுணர்",
+      "in English": "Study the science of metals.",
+      "எளிய பொருள்": "உலோகம், தாது, பொருள் அறிவியல், உற்பத்தித் தொழில்நுட்பம் ஆகியவற்றைக் கற்றறி.",
+      "explanation": "Bharathi explicitly values technical and industrial knowledge as part of economic independence and practical civilization-building."
+    },
+    {
+      "number": 102,
+      "புதிய ஆத்திசூடி": "லௌகிகம் ஆற்று",
+      "in English": "Fulfil your worldly duties.",
+      "எளிய பொருள்": "குடும்பம், தொழில், சமூகம், பொருளாதாரம், குடிமை ஆகிய உலகியல் பொறுப்புகளைச் செயல் படுத்து.",
+      "explanation": "Spiritual aspiration is not an excuse to neglect material needs, relationships, work, institutions, or civic responsibilities."
+    },
+    {
+      "number": 103,
+      "புதிய ஆத்திசூடி": "வருவதை மகிழ்ந்துண்",
+      "in English": "Receive what comes with gratitude and joy.",
+      "எளிய பொருள்": "கிடைத்த உணவும் வாய்ப்பும் சூழலும் எதுவாக இருந்தாலும் நன்றியுடன் ஏற்று பயன் படுத்து.",
+      "explanation": "The literal image is enjoying the food that arrives; more broadly, use present conditions well while still improving what should change."
+    },
+    {
+      "number": 104,
+      "புதிய ஆத்திசூடி": "வானநூற் பயிற்சி கொள்",
+      "in English": "Study astronomy.",
+      "எளிய பொருள்": "வானம், நட்சத்திரம், கோள், விண்வெளி பற்றிய அறிவியலைக் கற்றுக்கொள்.",
+      "explanation": "The sky should be investigated, expanding scientific imagination, measurement, navigation, and humanity's understanding of the cosmos."
+    },
+    {
+      "number": 105,
+      "புதிய ஆத்திசூடி": "விதையினைத் தெரிந்திடு",
+      "in English": "Know the seed before you sow.",
+      "எளிய பொருள்": "ஒரு செயல் அல்லது முதலீட்டின் மூலப்பொருள், இயல்பு, காலம், எதிர் விளைவை அறிந்தே தொடங்கு.",
+      "explanation": "Outcomes are shaped by initial inputs, so inspect the seed, idea, incentive, partner, assumption, and environment before committing resources."
+    },
+    {
+      "number": 106,
+      "புதிய ஆத்திசூடி": "வீரியம் பெருக்கு",
+      "in English": "Increase your vigor.",
+      "எளிய பொருள்": "உடல், மனம், அறிவு, செயல் ஆகியவற்றின் ஆற்றலை தொடர்ந்து வளர்த்து கொள்.",
+      "explanation": "Vigor is the renewable capacity to carry intention into reality through strength, endurance, courage, and fertility of thought."
+    },
+    {
+      "number": 107,
+      "புதிய ஆத்திசூடி": "வெடிப்புறப் பேசு",
+      "in English": "Speak with explosive clarity.",
+      "எளிய பொருள்": "மறைமுகமின்றி துணிவாகவும் தாக்கமுள்ளதாகவும் உண்மையை வெளிப்படுத்து.",
+      "explanation": "The force should come from truth, precision, and conviction rather than noise, abuse, or theatrical aggression."
+    },
+    {
+      "number": 108,
+      "புதிய ஆத்திசூடி": "வேதம் புதுமை செய்",
+      "in English": "Renew inherited wisdom.",
+      "எளிய பொருள்": "பழைய ஞானத்தையும் மரபையும் புதிய காலத்தின் அறிவு, மொழி, தேவைகளுக்கு ஏற்றவாறு உயிர்ப்பி.",
+      "explanation": "வேதம் can stand for sacred or inherited knowledge, which each generation must reinterpret, test, translate, and renew rather than freeze."
+    },
+    {
+      "number": 109,
+      "புதிய ஆத்திசூடி": "வையத் தலைமை கொள்",
+      "in English": "Take leadership in the world.",
+      "எளிய பொருள்": "உலகளாவிய பொறுப்பை ஏற்று அறிவு, நீதி, புதுமை, மனித நலனில் முன்னிலை கொள்.",
+      "explanation": "This is an invitation to develop global competence and moral responsibility, not a call for domination."
+    },
+    {
+      "number": 110,
+      "புதிய ஆத்திசூடி": "வௌவுதல் நீக்கு",
+      "in English": "Eliminate stealing and covetous seizure.",
+      "எளிய பொருள்": "பிறர் பொருளை அபகரிக்கவும் அநியாயமாக கைப்பற்றவும் நினைக்கும் ஆசையை நீக்கு.",
+      "explanation": "Reject theft in personal conduct and its larger institutional forms, including exploitation, fraud, appropriation, and predatory extraction."
+    }
+  ]
+}

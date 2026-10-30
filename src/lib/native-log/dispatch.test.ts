@@ -1,0 +1,14 @@
+import {afterEach,beforeEach,expect,it,vi} from 'vitest';
+const {rpc,allowance,worker}=vi.hoisted(()=>({rpc:vi.fn(),allowance:vi.fn(),worker:vi.fn()}));
+vi.mock('server-only',()=>({}));
+vi.mock('@/lib/supabase/admin-core',()=>({adminClient:()=>({rpc})}));
+vi.mock('./allowance',()=>({nativeProviderAllowance:allowance}));
+vi.mock('./structure-worker',()=>({runNativeStructure:worker}));
+vi.mock('./job',()=>({nativeJobSignature:()=> 'synthetic-signature'}));
+vi.mock('@/lib/app-origin',()=>({valueLogOrigin:()=> 'https://example.test'}));
+import {dispatchNativeProcessing} from './dispatch';
+beforeEach(()=>{vi.resetAllMocks();rpc.mockResolvedValue({data:'synthetic-lease',error:null});allowance.mockResolvedValue(undefined);worker.mockResolvedValue(undefined);});
+afterEach(()=>{vi.unstubAllEnvs();vi.unstubAllGlobals();});
+it('runs a signed local worker without a Netlify request',async()=>{vi.stubEnv('VALUE_LOG_LOCAL_JOBS','inline');const fetch=vi.fn();vi.stubGlobal('fetch',fetch);await dispatchNativeProcessing('owner','draft',2);await vi.waitFor(()=>expect(worker).toHaveBeenCalledOnce());expect(fetch).not.toHaveBeenCalled();const [body,sig]=worker.mock.calls[0];expect(JSON.parse(body)).toMatchObject({owner:'owner',id:'draft',revision:2,lease:'synthetic-lease'});expect(sig).toBe('synthetic-signature');});
+it('retains Netlify dispatch outside local mode',async()=>{vi.stubEnv('VALUE_LOG_LOCAL_JOBS','');const fetch=vi.fn().mockResolvedValue(new Response(null,{status:202}));vi.stubGlobal('fetch',fetch);await dispatchNativeProcessing('owner','draft',2);expect(fetch).toHaveBeenCalledWith('https://example.test/.netlify/functions/native-log-structure-background',expect.objectContaining({method:'POST'}));expect(worker).not.toHaveBeenCalled();});
+it('releases the reserved lease if remote dispatch fails',async()=>{vi.stubEnv('VALUE_LOG_LOCAL_JOBS','');vi.stubGlobal('fetch',vi.fn().mockResolvedValue(new Response(null,{status:404})));await expect(dispatchNativeProcessing('owner','draft',2)).rejects.toThrow('PROVIDER_UNAVAILABLE');expect(rpc).toHaveBeenCalledWith('release_native_log_processing',expect.objectContaining({p_token:'synthetic-lease'}));});

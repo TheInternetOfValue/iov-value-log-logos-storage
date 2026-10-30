@@ -1,0 +1,685 @@
+.native-log {
+  max-width: 1040px;
+  width: calc(100% - 48px);
+  margin: 24px auto 80px;
+  --native-ember: #bf4812;
+  --native-line: #ded8cd;
+  --native-ash: #68645d;
+}
+.native-log * {
+  min-width: 0;
+}
+.native-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.native-heading h1 {
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  line-height: 1.05;
+  max-width: 17ch;
+  margin: 0.25em 0 0.5em;
+  outline: none;
+}
+.native-save-state {
+  font-size: 0.8rem;
+  color: var(--native-ash);
+  padding-top: 8px;
+  max-width: 24ch;
+}
+.native-progress {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 42px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.native-progress li {
+  border-top: 1px solid var(--native-line);
+  padding-top: 12px;
+  font-size: 0.83rem;
+  color: var(--native-ash);
+  overflow-wrap: anywhere;
+}
+.native-progress li span {
+  font-size: 0.7rem;
+  margin-right: 8px;
+}
+.native-progress li[aria-current="step"] {
+  border-top: 3px solid var(--native-ember);
+  padding-top: 10px;
+  color: var(--native-ember);
+}
+.native-log .lede {
+  max-width: 62ch;
+  margin: 0 0 26px;
+}
+.native-log label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.native-log input:not([type="checkbox"]):not([type="radio"]),
+.native-log textarea,
+.native-log select {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  font: inherit;
+  font-size: 1rem;
+  color: inherit;
+  background: #fffdf8;
+  border: 1px solid var(--native-line);
+  border-radius: 0;
+  padding: 12px;
+}
+.native-log textarea {
+  line-height: 1.65;
+  resize: vertical;
+}
+.native-log button:not(.quiet):not(.secondary),
+.native-log .button {
+  background: var(--native-ember);
+  border-color: var(--native-ember);
+  color: #fffdf8;
+}
+.native-log button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.native-log button:focus-visible,
+.native-log a:focus-visible,
+.native-log input:focus-visible,
+.native-log textarea:focus-visible,
+.native-log select:focus-visible,
+.native-log summary:focus-visible {
+  outline: 2px solid var(--native-ember);
+  outline-offset: 4px;
+}
+.native-log .quiet {
+  background: none;
+  border-color: transparent;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.native-log .meta {
+  overflow-wrap: anywhere;
+}
+.native-date {
+  max-width: 260px;
+  margin-bottom: 20px;
+}
+.native-recorder {
+  text-align: center;
+  background: #fffdf8;
+  border: 1px solid var(--native-line);
+  padding: 40px 24px;
+  margin-bottom: 16px;
+}
+.native-recorder svg {
+  display: block;
+  margin: auto;
+  color: var(--native-ash);
+}
+.native-timer {
+  font-variant-numeric: tabular-nums;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin: 18px 0 12px;
+}
+.native-recorder.is-recording {
+  border-color: var(--native-ember);
+}
+.native-recorder.is-recording svg {
+  color: var(--native-ember);
+  animation: native-recording 1.5s ease-in-out infinite;
+}
+.native-recorder p:not(.native-timer) {
+  color: var(--native-ash);
+  max-width: 44ch;
+  margin: 12px auto 24px;
+}
+.native-playback {
+  display: grid;
+  gap: 10px;
+  margin: 24px 0;
+}
+.native-playback audio {
+  width: 100%;
+  max-width: 100%;
+}
+.native-playback a {
+  font-size: 0.85rem;
+  width: fit-content;
+}
+.native-file {
+  max-width: 480px;
+  margin: 26px 0;
+}
+.native-permissions {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0;
+  max-width: 760px;
+}
+.native-log .native-check {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 12px;
+  line-height: 1.65;
+  align-items: start;
+}
+.native-check input {
+  width: 18px;
+  height: 18px;
+  margin-top: 4px;
+  accent-color: var(--native-ember);
+}
+.native-permissions .meta {
+  margin: 0;
+  line-height: 1.6;
+}
+.native-notice {
+  border-left: 2px solid var(--native-ember);
+  padding: 10px 0 10px 18px;
+  max-width: 68ch;
+  line-height: 1.65;
+  margin: 24px 0;
+}
+.native-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+.native-words > label {
+  margin: 24px 0;
+}
+.native-log details {
+  margin: 22px 0;
+}
+.native-log summary {
+  cursor: pointer;
+  width: fit-content;
+  text-underline-offset: 4px;
+}
+.native-activity-list {
+  list-style: none;
+  padding: 0;
+}
+.native-activity-list > li {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--native-line);
+}
+.native-activity-title {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: end;
+}
+.native-activity-title > span {
+  align-self: center;
+  color: var(--native-ash);
+  font-size: 0.8rem;
+}
+.native-activity-list blockquote {
+  margin: 16px 0 16px 44px;
+  border-left: 1px solid var(--native-line);
+  padding-left: 16px;
+  color: var(--native-ash);
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.native-fields {
+  display: grid;
+  gap: 22px;
+  padding: 20px 0;
+}
+.native-time-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.native-log fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.native-log legend {
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+.native-node-choice > div {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.native-node-choice label {
+  position: relative;
+  display: block;
+}
+.native-node-choice input {
+  position: absolute;
+  left: 12px;
+  top: 13px;
+  accent-color: var(--native-ember);
+}
+.native-node-choice span {
+  display: block;
+  padding: 12px 12px 12px 38px;
+  border: 1px solid var(--native-line);
+  font-size: 0.9rem;
+  background: #fffdf8;
+}
+.native-node-choice input:checked + span {
+  border-color: var(--native-ember);
+  color: var(--native-ember);
+}
+.native-effect-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.native-clarification {
+  max-width: 760px;
+}
+.native-clarification h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 10px 0 16px;
+}
+.native-question-activity {
+  border-top: 1px solid var(--native-line);
+  padding-top: 22px;
+  font-weight: 500;
+}
+.native-timeline {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0;
+}
+.native-timeline > li {
+  border-left: 1px solid var(--native-line);
+  padding: 0 0 28px 26px;
+  position: relative;
+  overflow-wrap: anywhere;
+}
+.native-timeline > li:before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--native-ember);
+  position: absolute;
+  left: -5px;
+  top: 7px;
+}
+.native-timeline h2 {
+  font-size: 1.7rem;
+  line-height: 1.2;
+  margin: 8px 0;
+}
+.native-timeline p {
+  margin: 8px 0;
+}
+.native-time {
+  font-size: 0.82rem;
+  color: var(--native-ash);
+  font-variant-numeric: tabular-nums;
+}
+.native-confirmed-mark {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--native-ember);
+  border-radius: 50%;
+  color: var(--native-ember);
+  font-size: 2rem;
+  margin-bottom: 26px;
+}
+.native-message {
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  margin: 22px 0;
+}
+.native-message:empty {
+  display: none;
+}
+.native-saved {
+  border-top: 1px solid var(--native-line);
+  padding-top: 24px;
+  margin-top: 40px !important;
+}
+.native-saved ul {
+  list-style: none;
+  padding: 0;
+}
+.native-saved li {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--native-line);
+}
+.native-saved li > div {
+  display: grid;
+  gap: 5px;
+}
+.native-saved span {
+  font-size: 0.8rem;
+  color: var(--native-ash);
+}
+.native-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  border-top: 1px solid var(--native-line);
+  padding-top: 24px;
+  margin-top: 42px;
+  font-size: 0.85rem;
+}
+.native-footer p {
+  flex-basis: 100%;
+  max-width: 72ch;
+}
+.native-done {
+  padding: 16px 0 28px;
+}
+.native-done .lede {
+  font-size: 1.4rem;
+}
+.native-done p a {
+  margin-right: 10px;
+}
+@keyframes native-recording {
+  50% {
+    opacity: 0.5;
+  }
+}
+@media (max-width: 640px) {
+  .native-log {
+    width: calc(100% - 32px);
+    margin-top: 10px;
+  }
+  .native-heading h1 {
+    font-size: 2.5rem;
+  }
+  .native-progress {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+  .native-progress li span {
+    display: block;
+    margin-bottom: 6px;
+  }
+  .native-recorder {
+    padding: 28px 16px;
+  }
+  .native-time-pair,
+  .native-effect-fields {
+    grid-template-columns: 1fr;
+  }
+  .native-node-choice > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .native-activity-title {
+    grid-template-columns: 1.5rem minmax(0, 1fr);
+  }
+  .native-activity-title > button {
+    grid-column: 2;
+    justify-self: start;
+  }
+  .native-activity-list blockquote {
+    margin-left: 0;
+  }
+  .native-actions > * {
+    width: 100%;
+    text-align: center;
+  }
+  .native-timeline > li {
+    padding-left: 18px;
+  }
+  .native-permissions {
+    gap: 20px;
+  }
+  .native-date {
+    max-width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .native-recorder.is-recording svg {
+    animation: none;
+  }
+  .native-log * {
+    scroll-behavior: auto;
+  }
+}
+
+/* One microphone and one approval action; the table is a conversational readback. */
+.native-conversation .native-heading h1,
+.native-conversation .native-heading h2 {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.12;
+  margin: 6px 0 20px;
+  outline: none;
+  scroll-margin-top: 80px;
+}
+.native-mic-zone {
+  text-align: center;
+  margin: 24px auto 12px;
+}
+.native-log .native-mic {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 76px;
+  border-radius: 48px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  touch-action: manipulation;
+}
+.native-log .native-mic.is-recording {
+  box-shadow: 0 0 0 5px #bf48121a;
+}
+.native-mic-zone .meta {
+  margin: 12px auto;
+  max-width: 48ch;
+}
+.native-log .native-submit {
+  display: block;
+  width: min(100%, 440px);
+  min-height: 54px;
+  margin: 24px auto;
+}
+.native-processing-note {
+  font-size: 0.78rem;
+  line-height: 1.65;
+  max-width: 70ch;
+  text-align: center;
+  margin: 0 auto 24px;
+  color: var(--native-ash);
+}
+.native-readback-wrap {
+  width: 100%;
+  overflow-wrap: anywhere;
+  margin: 18px 0;
+}
+.native-readback {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.native-readback th {
+  font-size: 0.72rem;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--native-ash);
+  padding: 12px;
+  border-bottom: 1px solid var(--native-line);
+}
+.native-readback th:first-child {
+  width: 25%;
+}
+.native-readback th:nth-child(2) {
+  width: 44%;
+}
+.native-readback td {
+  vertical-align: top;
+  padding: 18px 12px;
+  border-bottom: 1px solid var(--native-line);
+  overflow-wrap: anywhere;
+}
+.native-readback strong {
+  font-weight: 500;
+}
+.native-readback small {
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 7px;
+  color: var(--native-ash);
+}
+.native-readback-time {
+  font-variant-numeric: tabular-nums;
+  white-space: normal;
+}
+.native-source {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+.native-more {
+  border-top: 1px solid var(--native-line);
+  padding-top: 16px;
+}
+.native-pending-capture {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--native-line);
+}
+.native-review-queue nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.native-working {
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .native-conversation {
+    width: 100%;
+  }
+  .native-readback th,
+  .native-readback td {
+    padding: 12px 6px;
+  }
+  .native-readback {
+    font-size: 0.82rem;
+  }
+  .native-readback small {
+    font-size: 0.7rem;
+  }
+  .native-readback th:first-child {
+    width: 26%;
+  }
+  .native-readback th:nth-child(2) {
+    width: 43%;
+  }
+  .native-log .native-mic {
+    max-width: 100%;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+}
+
+.voice-entry .native-conversation .native-heading h2 {font-family:var(--font-display),Georgia,serif;font-size:clamp(1.9rem,3.2vw,2.6rem);margin:4px 0 10px}
+/* Embedded on Today: one calm card aligned to the page column. */
+.voice-entry .native-log {padding:clamp(20px,3vw,34px) clamp(20px,3.4vw,40px)}
+.voice-entry .native-heading .meta {margin:0;letter-spacing:.02em}
+.voice-entry .native-save-state:empty {display:none}
+.voice-entry .native-log .lede {margin:0;max-width:56ch;color:var(--native-ash);font-size:1.02rem;line-height:1.55}
+.voice-entry .native-mic-zone {margin:26px auto 6px}
+.voice-entry .native-log .native-mic {min-height:64px;padding:12px 30px 12px 24px;box-shadow:0 10px 24px #bf48122e}
+.voice-entry .native-mic-zone .meta {margin:10px auto 0;font-size:.85rem}
+.voice-entry .native-submit-status:empty {display:none}
+.voice-entry .native-recording-info {margin-top:22px;padding-top:14px;border-top:1px solid var(--native-line)}
+.voice-entry .native-recording-info summary {cursor:pointer;font-size:.8rem;letter-spacing:.02em}
+.voice-entry .native-recording-info p {margin:8px 0 0;font-size:.8rem;line-height:1.55}
+.member-voice-default {display:block!important}
+.member-optional-writing {margin:20px 0}
+
+.native-action-bar.has-table {
+  position: sticky;
+  bottom: 0;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 10px 12px;
+  align-items: start;
+  border-top: 1px solid var(--native-line);
+  background: #fffdf8;
+  padding: 14px 0 max(14px, env(safe-area-inset-bottom));
+  margin: 20px 0;
+}
+.native-action-bar.has-table .native-mic-zone,
+.native-action-bar.has-table .native-submit { margin: 0; width: 100%; }
+.native-action-bar.has-table .native-mic {
+  width: 100%; min-height: 54px; padding: 10px 12px;
+  gap: 8px; border-radius: 0; font-size: .9rem;
+}
+.native-action-bar.has-table .native-mic svg { width: 24px; height: 28px; flex: none; }
+.native-action-bar.has-table .native-mic-zone > .meta { display: none; }
+.native-submit-status,
+.native-processing-retry { grid-column: 1 / -1; }
+.native-submit-status { margin: 0; line-height: 1.5; font-size: .88rem; overflow-wrap: anywhere; }
+.native-recording-info { font-size: .85rem; color: var(--native-ash); }
+.native-recording-info .native-processing-note { text-align: left; margin: 12px 0; }
+.native-recording-info p { max-width: 70ch; }
+
+/* Review history: one activity per card with details available on demand. */
+.native-log.review-history { margin:32px auto; max-width:1000px; padding:0; border:0; background:transparent; }
+.review-history-heading { margin-bottom:18px; }.review-history-heading > p { margin:0 0 6px; color:#a34a2d; font-size:.65rem; font-weight:700; letter-spacing:.15em; }.review-history-heading h2 { margin:0 0 8px; font-size:2rem; }.review-history-heading > span { color:#68645d; font-size:.8rem; line-height:1.5; }
+.review-history-list { display:grid; gap:12px; }.review-history-card,.native-review-queue .native-pending-capture { padding:20px; border:1px solid #e0d9cd; background:#fffdf8; }
+.review-history-card-top { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }.review-history-card-top time { color:#777168; font-size:.72rem; }.review-history-status { padding:5px 9px; border-radius:999px; background:#f0ede5; color:#625d53; font-size:.65rem; font-weight:600; }.review-history-status.needs-detail { background:#f8e9d9; color:#944b2b; }
+.review-history-card h3 { margin:18px 0 6px; font:500 1.65rem/1.1 var(--font-display),Georgia,serif; overflow-wrap:anywhere; }.review-history-meta { margin:0; color:#68645d; font-size:.78rem; }.review-history-explanation { margin:14px 0 0; color:#68645d; font-size:.78rem; line-height:1.5; }
+.review-history-details { margin:16px 0 0; border-top:1px solid #e7e0d5; }.review-history-details > summary { padding:12px 0; color:#625d53; cursor:pointer; font-size:.76rem; font-weight:600; }.review-history-action { margin-top:4px; }.review-history-action button,.native-review-queue .native-pending-capture button { min-height:42px; padding:10px 15px; border:1px solid #253029; border-radius:999px; background:transparent; color:#253029; font-size:.75rem; font-weight:600; }.review-history-action p:empty { display:none; }
+.native-review-queue .native-pending-capture { margin:12px 0; }.native-review-queue .native-pending-capture h3 { margin-top:0; }.native-review-queue .native-pending-capture > p { color:#68645d; font-size:.8rem; line-height:1.5; }
+@media (max-width:600px) { .native-log.review-history { margin:28px 16px; }.review-history-card,.native-review-queue .native-pending-capture { padding:16px; } }
+.review-history-adoption { max-width:1000px; margin:24px auto; padding:18px; border:1px solid #e0d9cd; background:#faf8f3; }.review-history-adoption > summary { cursor:pointer; font-weight:600; }.review-history-adoption > p { color:#68645d; font-size:.8rem; line-height:1.55; }.review-history-adoption article { padding:12px 0; border-top:1px solid #e0d9cd; }
+@media (max-width:600px) { .review-history-adoption { margin-inline:16px; } }
+.voice-entry .native-log {width:auto;max-width:none;margin:0}
+.voice-entry .native-conversation > :empty {display:none}
+.voice-entry .native-more {margin:0;padding:14px 0 0}
+.voice-entry .native-more + .native-more {margin-top:14px}
+.voice-entry .native-more > summary {cursor:pointer;font-size:.9rem}
+.voice-entry .native-recording-info + * {margin-top:0}
+.voice-entry .native-saved {margin:14px 0 0 !important;padding:14px 0 0;border-top:1px solid var(--native-line)}
+.voice-entry .native-saved > summary {cursor:pointer;font-size:.9rem}
+/* Saved drafts on Today: a quiet list with pill actions in one row. */
+.voice-entry .native-saved ul {margin:10px 0 0}
+.voice-entry .native-saved li {padding:12px 0;gap:16px}
+.voice-entry .native-saved li strong {font-size:.92rem;font-weight:600}
+.voice-entry .native-saved button.secondary {min-height:36px;padding:7px 16px;border:1px solid var(--native-line);border-radius:999px;background:transparent;font-size:.8rem;line-height:1.2;cursor:pointer}
+.voice-entry .native-saved button.secondary:hover {border-color:var(--ink)}
+.voice-entry .native-saved > button.secondary {margin:14px 10px 0 0;vertical-align:middle}
+.voice-entry .native-saved > div {display:inline-flex;align-items:center;gap:10px;margin-top:14px;vertical-align:middle}
+.voice-entry .native-saved > div p:empty {display:none}
+.voice-entry .native-saved > .meta {margin:14px 0 0;font-size:.78rem;line-height:1.5;color:var(--native-ash)}

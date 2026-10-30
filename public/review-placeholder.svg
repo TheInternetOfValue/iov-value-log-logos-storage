@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Historical screenshot omitted</title>
+  <desc id="desc">This public source review excludes private pilot screenshots. Run the synthetic dataset to inspect the interface.</desc>
+  <rect width="960" height="600" fill="#f5f2eb"/>
+  <text x="480" y="275" text-anchor="middle" font-family="sans-serif" font-size="30" fill="#272522">Historical screenshot omitted</text>
+  <text x="480" y="325" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#625d54">Public source review · use the synthetic demo</text>
+</svg>

@@ -1,0 +1,39 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "IoV Value Log Draft Intake",
+    "version": "1.0.1-recovery",
+    "description": "Temporary known-good, activity-only recovery Action for the private Value Log pilot."
+  },
+  "servers": [{ "url": "https://valuelog.theinternetofvalue.org" }],
+  "paths": {
+    "/api/v1/intakes": {
+      "post": {
+        "operationId": "submitValueLogDraft",
+        "summary": "Submit a raw narrative and proposed draft slices",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Intake" } } } },
+        "responses": { "201": { "description": "Draft intake created" }, "422": { "description": "Schema validation failed" } }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": { "bearerAuth": { "type": "http", "scheme": "bearer" } },
+    "schemas": {
+      "Intake": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["idempotency_key", "timezone", "raw_narrative", "slices", "observer_confirmation"],
+        "properties": {
+          "idempotency_key": { "type": "string", "minLength": 12 },
+          "source_timestamp": { "type": "string", "format": "date-time" },
+          "parser_version": { "type": "string" },
+          "timezone": { "type": "string" },
+          "raw_narrative": { "type": "string", "maxLength": 50000 },
+          "observer_confirmation": { "type": "object", "required": ["confirmed", "channel", "confirmation_text"], "properties": { "confirmed": { "type": "boolean", "const": true }, "channel": { "type": "string", "enum": ["private_custom_gpt"] }, "confirmation_text": { "type": "string" } } },
+          "slices": { "type": "array", "minItems": 1, "maxItems": 100, "items": { "type": "object", "required": ["start_at", "end_at", "timezone", "activity", "wellbeing_node", "slice_type", "community"], "properties": { "start_at": { "type": "string", "format": "date-time" }, "end_at": { "type": "string", "format": "date-time" }, "timezone": { "type": "string" }, "activity": { "type": "string" }, "proof": { "type": "string" }, "wellbeing_node": { "enum": ["Physiology", "Emotion", "Feeling", "Thought", "Habit", "Performance"] }, "slice_type": { "enum": ["non_performance", "performance"] }, "community": { "enum": ["house_of_bros", "iov", "gfe"] }, "sao_lane": { "enum": ["Learning", "Earning", "OrgBuilding"] }, "skill_level": { "enum": ["L0", "L1", "L2", "L3", "L4"] }, "impact_direction": { "enum": ["positive", "neutral", "negative"] }, "impact_intensity": { "enum": ["low", "medium", "high"] }, "confidence": { "enum": ["observed", "inferred", "uncertain"] } } } }
+        }
+      }
+    }
+  }
+}

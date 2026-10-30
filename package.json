@@ -1,0 +1,67 @@
+{
+  "name": "iov-value-log",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22 <23"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "node ops/identity-release.mjs --write && next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit --incremental false",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "analyze:value-log": "node --import tsx scripts/analyze-value-log.ts",
+    "simulate:wellbeing": "node --import tsx scripts/simulate-founder-wellbeing.ts",
+    "dry-run:founder-replay": "node --import tsx scripts/dry-run-founder-replay.ts",
+    "export:founder-replay-input": "node --import tsx scripts/export-founder-replay-input.ts",
+    "verify:identity-launch": "node scripts/verify-identity-launch.mjs",
+    "check": "npm run release:check && npm run typecheck && npm run lint && npm run test && npm run build",
+    "release:check": "node ops/identity-release.mjs",
+    "release:canonical": "node ops/identity-release.mjs --canonical",
+    "test:members:db": "node scripts/test-member-database.mjs",
+    "test:members:browser": "node scripts/member-browser-fixture.mjs",
+    "test:field-station": "vitest run src/lib/field-station",
+    "test:field-station:integration": "node scripts/test-dated-integration.mjs",
+    "logos:node": "node scripts/logos-storage-node.mjs",
+    "logos:check": "node --import tsx scripts/logos-storage-check.mts",
+    "logos:mirror": "node --env-file-if-exists=.env.local --env-file-if-exists=.env --import tsx scripts/logos-storage-mirror.mts",
+    "logos:demo": "node --import tsx scripts/logos-storage-demo.mts",
+    "logos:import": "node --import tsx scripts/logos-storage-records.mts import",
+    "logos:records": "node --import tsx scripts/logos-storage-records.mts show"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.0",
+    "@supabase/supabase-js": "^2.110.0",
+    "@theinternetofvalue/wellbeing-identity-contracts": "file:vendor/theinternetofvalue-wellbeing-identity-contracts-0.1.4.tgz",
+    "@theinternetofvalue/wellbeing-identity-renderer": "file:vendor/theinternetofvalue-wellbeing-identity-renderer-0.2.5.tgz",
+    "next": "^16.2.10",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "server-only": "^0.0.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@netlify/plugin-nextjs": "^5.15.12",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitest/coverage-v8": "^4.1.9",
+    "eslint": "^9",
+    "eslint-config-next": "^16.2.10",
+    "supabase": "2.109.1",
+    "tailwindcss": "^4",
+    "tsx": "4.23.1",
+    "typescript": "^5",
+    "vitest": "^4.1.9"
+  },
+  "description": "Independent source review of the Value Log Logos Storage integration",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheInternetOfValue/iov-value-log-logos-storage.git"
+  }
+}

@@ -1,0 +1,17 @@
+import { afterEach, beforeEach, expect, it, vi } from 'vitest';
+import { NextRequest } from 'next/server';
+const {session,load,dispatch,ready}=vi.hoisted(()=>({session:vi.fn(),load:vi.fn(),dispatch:vi.fn(),ready:vi.fn()}));
+vi.mock('server-only',()=>({}));
+vi.mock('@/lib/native-log/dispatch',()=>({dispatchNativeProcessing:dispatch}));
+vi.mock('@/lib/native-log/capture-storage',()=>({assertCapturesReady:ready}));
+vi.mock('@/lib/native-log/server',()=>({nativeSession:session,loadNative:load,readNativeContent:(x:unknown)=>x,nativeJson:(r:NextRequest)=>r.json(),nativeFailure:(e:Error)=>Response.json({code:e.message},{status:409})}));
+import {POST} from './route';
+const id='10000000-0000-4000-8000-000000000001';
+const send=(revision=2)=>POST(new NextRequest('http://127.0.0.1:3000/api/native-log/structure',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({id,revision,consent:true})}));
+beforeEach(()=>{vi.resetAllMocks();session.mockResolvedValue({user:{id:'synthetic-owner'}});load.mockResolvedValue({revision:2,document:{transcript:'Synthetic test words'}});dispatch.mockResolvedValue(undefined);});
+afterEach(()=>vi.unstubAllEnvs());
+it('uses the shared dispatcher so local mode can bypass Netlify',async()=>{vi.stubEnv('VALUE_LOG_LOCAL_JOBS','inline');const r=await send();expect(r.status).toBe(202);expect(dispatch).toHaveBeenCalledWith('synthetic-owner',id,2);expect(await r.json()).toEqual({id,revision:2,processing:true});});
+it('preserves the shared production dispatch path',async()=>{vi.stubEnv('VALUE_LOG_LOCAL_JOBS','');expect((await send()).status).toBe(202);expect(dispatch).toHaveBeenCalledOnce();});
+it('rejects stale revisions before dispatch',async()=>{expect((await send(1)).status).toBe(409);expect(dispatch).not.toHaveBeenCalled();});
+it('rejects incomplete audio before dispatch',async()=>{ready.mockImplementation(()=>{throw Error('INCOMPLETE_RECORDING');});expect((await send()).status).toBe(409);expect(dispatch).not.toHaveBeenCalled();});
+it('does not dispatch when session checks fail',async()=>{session.mockRejectedValue(Error('UNAUTHORIZED'));expect((await send()).status).toBe(409);expect(dispatch).not.toHaveBeenCalled();});

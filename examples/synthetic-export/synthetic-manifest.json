@@ -1,0 +1,52 @@
+{
+  "synthetic": true,
+  "description": "Invented software-review fixture; no private observations, score movement or credits.",
+  "snapshot_at": "2026-10-28T12:00:00+05:30",
+  "files": [
+    {
+      "name": "sample-value-log-records-2026-10-28.csv",
+      "rows": 2,
+      "sha256": "91245e6229da15ab762acb8ea92b119c007d0272bc6a069650d5573ba2ee362f"
+    },
+    {
+      "name": "sample-current-promoted-founder-replay-2026-10-28.csv",
+      "rows": 1,
+      "sha256": "86e688404d94e5f7bff798eb890f8ed0eb2e432c81c87160990e6c9bc602eb06"
+    },
+    {
+      "name": "sample-founder-wellbeing-value-events-2026-10-28.csv",
+      "rows": 0,
+      "sha256": "ca9b78c693a7ddb5a40e599821b9683a66cef727d337c638ed88e0a109e5b241"
+    },
+    {
+      "name": "sample-w-transitions-2026-10-28.csv",
+      "rows": 0,
+      "sha256": "d7997681bca920ebbf6e7ebed8b8b0200c87a4cbef7c14009a13ba8a47ab949f"
+    },
+    {
+      "name": "sample-credit-events-2026-10-28.csv",
+      "rows": 0,
+      "sha256": "8b452aa43ca8726e1b1a81b8b690ebfe17f15e8e29cc167f338e647e4e8c9c44"
+    },
+    {
+      "name": "sample-current-weekly-reviews-2026-10-28.csv",
+      "rows": 0,
+      "sha256": "26daff10a69178070088586b518662984ae74ae35b3144c754278cdeede75759"
+    },
+    {
+      "name": "sample-weekly-review-packets-2026-10-28.csv",
+      "rows": 0,
+      "sha256": "a3a5707a057ba34460123d2f6286c600da4276a5c4cc9b47cae20d51da6c405b"
+    },
+    {
+      "name": "sample-current-daily-plans-2026-10-28.csv",
+      "rows": 0,
+      "sha256": "1c06e0fc01b679adb797ba9102888d160ac3f7895d92a1869da7bc3d04027014"
+    },
+    {
+      "name": "sample-daily-plan-blocks-2026-10-28.csv",
+      "rows": 0,
+      "sha256": "0e5d90275faf4c8127fecf9b687e8fb11798b37bac4a2d3d2e9a901295d20825"
+    }
+  ]
+}

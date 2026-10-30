@@ -1,0 +1,34 @@
+{
+	admin off
+	auto_https off
+	persist_config off
+}
+
+# The node's REST API has no authentication; this is the only public entry point.
+:{$PORT:8080} {
+	@authorized header Authorization "Bearer {$LOGOS_STORAGE_TOKEN}"
+
+	# Only the endpoints the native-log mirror uses.
+	@upload {
+		path /api/storage/v1/data
+		method POST
+	}
+	@object {
+		path_regexp object ^/api/storage/v1/data/[A-Za-z0-9]{10,200}$
+		method GET DELETE
+	}
+
+	handle @authorized {
+		handle @upload {
+			request_body {
+				max_size 2MB
+			}
+			reverse_proxy 127.0.0.1:{$LOGOS_API_PORT:8081}
+		}
+		handle @object {
+			reverse_proxy 127.0.0.1:{$LOGOS_API_PORT:8081}
+		}
+		respond 404
+	}
+	respond 401
+}

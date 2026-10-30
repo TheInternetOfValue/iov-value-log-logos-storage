@@ -1,0 +1,42 @@
+name: Sunday Value Log review
+
+on:
+  schedule:
+    # GitHub schedules use UTC. 01:30 UTC is 07:00 Asia/Kolkata.
+    - cron: "30 1 * * 0"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Synthetic notification test or owner-authorized production rehearsal"
+        required: true
+        type: choice
+        default: synthetic
+        options:
+          - synthetic
+          - production
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sunday-value-log-review
+  cancel-in-progress: false
+
+jobs:
+  prepare-and-remind:
+    if: github.event_name == 'workflow_dispatch' || vars.WEEKLY_REVIEW_SCHEDULE_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Prepare private packet and send status-only reminder
+        env:
+          VALUE_LOG_APP_URL: ${{ vars.VALUE_LOG_APP_URL }}
+          WEEKLY_REVIEW_CRON_SECRET: ${{ secrets.WEEKLY_REVIEW_CRON_SECRET }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          RITUAL_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'production' }}
+        run: node scripts/run-weekly-review-ritual.mjs

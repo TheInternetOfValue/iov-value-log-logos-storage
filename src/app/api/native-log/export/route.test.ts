@@ -1,0 +1,25 @@
+import { afterEach, beforeEach, expect, it, vi } from "vitest";
+vi.mock("server-only",()=>({}));
+const { session }=vi.hoisted(()=>({session:vi.fn()}));
+vi.mock("@/lib/members/session",()=>({memberSession:session}));
+import { NextRequest } from "next/server";
+import { encryptNarrative } from "@/lib/crypto";
+import { memberWriteBinding } from "@/lib/members/http";
+import { nativeOwnerScope } from "@/lib/native-log/server";
+import { newNativeDraft } from "@/lib/native-log/draft";
+import { GET } from "./route";
+const owner="22222222-2222-4222-8222-222222222222";
+beforeEach(()=>{vi.stubEnv("NARRATIVE_ENCRYPTION_KEY_BASE64",Buffer.alloc(32,4).toString("base64"));vi.stubEnv("AUDIT_DIGEST_KEY","synthetic-export-owner-key-more-than-thirty-two");session.mockReset();});
+afterEach(()=>vi.unstubAllEnvs());
+it("exports every owner draft through bounded pages and retains removal markers without ciphertext",async()=>{
+ const document={...newNativeDraft(nativeOwnerScope(owner),"2026-10-24","Asia/Kolkata","personal"),transcript:"Synthetic தமிழ் draft"};
+ const encrypted=encryptNarrative(JSON.stringify({document,parts:{},totalParts:null}));
+ const rows=Array.from({length:7},(_,i)=>({id:`aaaaaaaa-aaaa-4aaa-8aaa-${String(i).padStart(12,"0")}`,owner_id:i===6?"another":owner,revision:1,status:i===5?"removed":"draft",content_ciphertext:encrypted.ciphertext,content_iv:encrypted.iv,content_auth_tag:encrypted.authTag,receipt:null,created_at:"2026-10-24T00:00:00Z",updated_at:"2026-10-24T00:00:00Z",removed_at:i===5?"2026-10-24T01:00:00Z":null}));
+ const eq=vi.fn(),limit=vi.fn();
+ const client={from:()=>{let selected=rows;const q={select:()=>q,eq:(key:string,value:string)=>{eq(key,value);selected=selected.filter(r=>String(r[key as keyof typeof r])===value);return q;},lte:()=>q,order:()=>q,limit:(n:number)=>{limit(n);return q;},gt:(_key:string,value:string)=>{selected=selected.filter(r=>r.id>value);return q;},then:(resolve:(value:unknown)=>unknown)=>Promise.resolve({data:selected.slice(0,5),error:null}).then(resolve)};return q;}};
+ session.mockResolvedValue({kind:"personal",user:{id:owner},onboarded:true,client});
+ const request=(query="")=>new NextRequest("https://valuelog.theinternetofvalue.org/api/native-log/export"+query,{headers:{"x-value-log-session":memberWriteBinding(owner)}});
+ const first=await GET(request()),a=await first.json();const second=await GET(request(`?cursor=${a.next}&cutoff=${a.cutoff}`)),b=await second.json();
+ expect(a.records).toHaveLength(5);expect(b.records).toHaveLength(1);expect(b.next).toBeNull();expect(b.records[0].status).toBe("removed");expect(a.records[0].document.transcript).toBe(document.transcript);expect(JSON.stringify(a)).not.toContain(encrypted.ciphertext);expect(eq).toHaveBeenCalledWith("owner_id",owner);expect(limit).toHaveBeenCalledWith(5);expect(first.headers.get("cache-control")).toContain("no-store");
+ expect((await GET(request("?cursor=invalid"))).status).toBe(400);
+});

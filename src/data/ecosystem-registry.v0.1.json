@@ -1,0 +1,42 @@
+{
+  "registry_version": "0.1.0",
+  "boundary": "Registry inclusion means recognition within The Internet of Value ecosystem. It does not imply legal registration, endorsement, membership, validation authority or permission to act for the entity.",
+  "entities": [
+    {
+      "id": "iov",
+      "slug": "internet-of-value-research-foundation",
+      "name": "Internet of Value Research Foundation",
+      "entity_type": "foundation",
+      "status": "registered",
+      "public_description": "The institutional research foundation responsible for stewarding and communicating The Internet of Value ecosystem.",
+      "canonical_website": "https://theinternetofvalue.org",
+      "authority_repository": "https://github.com/TheInternetOfValue/the-internet-of-value-spec",
+      "supported_protocol_roles": ["iov_validator", "performance_source_review"],
+      "registry_version": "0.1.0"
+    },
+    {
+      "id": "gfe",
+      "slug": "growth-flow-engineering",
+      "name": "Growth Flow Engineering",
+      "entity_type": "skill_community",
+      "status": "registered",
+      "public_description": "A skill community for evidence-bearing commercial and operating capability development.",
+      "canonical_website": "https://growthflowengineering.xyz",
+      "authority_repository": "https://github.com/GrowthFlowEngineering/GFE-SkillSystem",
+      "supported_protocol_roles": ["gfe_validator", "performance_source_review"],
+      "registry_version": "0.1.0"
+    },
+    {
+      "id": "house_of_bros",
+      "slug": "houseofbros",
+      "name": "HouseOfBros",
+      "entity_type": "wellbecoming_community",
+      "status": "registered",
+      "public_description": "A Wellbecoming community for men that operates an issuer-specific HouseOfBros implementation of ~WellbecomingProtocol.",
+      "canonical_website": "https://houseofbros.theinternetofvalue.org",
+      "authority_repository": "https://github.com/houseofbroscommunity/houseofbros",
+      "supported_protocol_roles": ["house_of_bros_validator", "performance_impact_review", "wellbeing_state_issuer"],
+      "registry_version": "0.1.0"
+    }
+  ]
+}

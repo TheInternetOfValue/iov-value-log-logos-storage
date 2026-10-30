@@ -1,0 +1,19 @@
+import { NextRequest, NextResponse } from "next/server";
+import { apiError } from "@/lib/auth";
+import { requireGptOwner, payloadHash } from "@/lib/gpt-api";
+import { dailyPlanInputSchema, dailyPlanTemporalError } from "@/lib/operating-protocol";
+
+export const runtime = "nodejs";
+
+export async function POST(request: NextRequest) {
+  const access = await requireGptOwner(request);
+  if ("error" in access) return access.error;
+  const body = await request.json().catch(() => null);
+  const parsed = dailyPlanInputSchema.safeParse(body);
+  if (!parsed.success) return apiError(422, "validation_failed", parsed.error.flatten());
+  const temporalError = dailyPlanTemporalError(parsed.data);
+  if (temporalError) return apiError(422, temporalError);
+  const { data, error } = await access.db.rpc("save_daily_plan", { p_owner_id: access.ownerId, p_payload: parsed.data, p_payload_hash: payloadHash(parsed.data) });
+  if (error) return apiError(error.message.includes("conflict") ? 409 : 422, error.message);
+  return NextResponse.json({ ok: true, daily_plan_id: data }, { status: 201 });
+}

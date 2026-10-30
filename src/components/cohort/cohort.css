@@ -1,0 +1,236 @@
+.cohort-panel {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: clamp(18px, 4vw, 38px);
+  border: 1px solid var(--border, #ded8cd);
+  background: var(--surface, #fffdf8);
+  overflow-wrap: anywhere;
+}
+.cohort-panel form {
+  display: grid;
+  gap: 18px;
+}
+.cohort-panel label {
+  display: grid;
+  gap: 8px;
+}
+.cohort-panel input:not([type="checkbox"]):not([type="radio"]),
+.cohort-panel textarea,
+.cohort-panel select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  font: inherit;
+  border: 1px solid #c6beb1;
+  background: transparent;
+  color: inherit;
+  box-sizing: border-box;
+}
+.cohort-panel fieldset {
+  min-width: 0;
+  border: 1px solid #ded8cd;
+  padding: 16px;
+}
+.cohort-panel legend {
+  padding: 0 8px;
+  font-weight: 600;
+}
+.cohort-panel details {
+  margin: 18px 0;
+}
+.cohort-panel summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding: 10px 0;
+}
+.cohort-panel .cohort-check,
+.cohort-choices label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.6;
+}
+.cohort-check input,
+.cohort-choices input {
+  margin-top: 7px;
+  flex: none;
+}
+.cohort-choices,
+.cohort-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.cohort-start {
+  padding: 20px;
+  border-left: 3px solid #bf4812;
+  background: #f8f5ee;
+  margin: 20px 0;
+}
+.cohort-score-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.cohort-score-heading h2 span {
+  font-size: 0.6em;
+  color: #68645d;
+}
+.cohort-score {
+  font-size: clamp(36px, 7vw, 64px);
+  font-weight: 500;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+.cohort-score small {
+  display: block;
+  font-size: 13px;
+  color: #68645d;
+  text-align: right;
+}
+.cohort-components {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+.cohort-components div {
+  border-top: 1px solid #ded8cd;
+  padding-top: 12px;
+}
+.cohort-components dt {
+  font-size: 14px;
+}
+.cohort-components dd {
+  margin: 8px 0;
+  font-variant-numeric: tabular-nums;
+}
+.cohort-records {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 22px;
+}
+.cohort-records > li {
+  border-top: 1px solid #ded8cd;
+  padding-top: 22px;
+}
+.cohort-records blockquote {
+  margin: 12px 0;
+  padding-left: 16px;
+  border-left: 2px solid #ded8cd;
+}
+.cohort-status {
+  font-size: 14px;
+  font-weight: 600;
+}
+.voice-entry {
+  margin: 8px 0 40px;
+  border: 1px solid #ded8cd;
+  background: #fffdf8;
+}
+.voice-entry > summary {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  cursor: pointer;
+  list-style: none;
+}
+.voice-entry > summary svg {
+  color: #bf4812;
+  flex: none;
+}
+.voice-entry > summary strong {
+  display: block;
+  font-size: 24px;
+}
+.voice-entry > summary span {
+  display: block;
+  color: #68645d;
+  font-size: 14px;
+}
+.voice-entry .native-log {
+  padding: clamp(12px, 3vw, 26px);
+  margin: 0;
+}
+.voice-entry .native-heading h2 {
+  font-family: inherit;
+  font-size: 28px;
+}
+.native-conversation {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0;
+}
+.native-conversation textarea {
+  min-height: 96px;
+  width: 100%;
+  max-width: 100%;
+  padding: 12px;
+  font: inherit;
+  box-sizing: border-box;
+}
+.native-record-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 60px;
+}
+.cohort-panel button {
+  min-height: 44px;
+  max-width: 100%;
+}
+@media (max-width: 420px) {
+  .cohort-choices,
+  .cohort-fields {
+    grid-template-columns: 1fr;
+  }
+  .cohort-components {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .voice-entry > summary {
+    padding: 18px;
+    gap: 14px;
+  }
+  .voice-entry > summary strong {
+    font-size: 22px;
+  }
+  .cohort-panel {
+    margin: 16px 0;
+  }
+  .cohort-score-heading {
+    gap: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cohort-panel *,
+  .voice-entry * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.cohort-components div {
+  border-top-color: currentColor;
+}
+.cohort-components dt,
+.cohort-components dd {
+  color: var(--ink, #252622);
+}
+
+.cohort-day-heading {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 clamp(18px, 4vw, 38px);
+  box-sizing: border-box;
+}
+
+.reviewer-page { max-width:720px; margin:0 auto; }
+.reviewer-heading { margin:12px 0 28px; }.reviewer-heading h1 { margin:6px 0; font-size:clamp(3.4rem,9vw,5.5rem); letter-spacing:-.045em; }.reviewer-heading > p:last-child { color:#68645d; font-size:.9rem; line-height:1.5; }
+.reviewer-status { padding:28px; background:#eae5da; }.reviewer-status.is-active { background:#253029; color:#f8f5ee; }.reviewer-status-top { display:flex; justify-content:space-between; align-items:center; font-size:.65rem; font-weight:700; letter-spacing:.15em; opacity:.75; }.reviewer-status-top i { width:9px; height:9px; background:#a7774c; border-radius:50%; }.reviewer-status.is-active .reviewer-status-top i { background:#c4d4a1; }.reviewer-status h2 { margin:28px 0 10px; font-size:2.5rem; }.reviewer-status p { margin:0; max-width:440px; font-size:.82rem; line-height:1.6; opacity:.8; }.reviewer-status button { display:flex; justify-content:space-between; gap:18px; align-items:center; width:100%; min-height:50px; margin-top:24px; padding:12px 15px; border:1px solid currentColor; background:transparent; color:inherit; font-weight:600; text-align:left; }
+.reviewer-about { margin:36px 0; }.reviewer-about h2 { margin:6px 0 16px; font-size:1.9rem; }.reviewer-about > div { display:grid; grid-template-columns:30px 1fr; gap:12px; padding:14px 0; border-top:1px solid #ded8cd; }.reviewer-about > div span { color:#a34a2d; font-size:.7rem; font-weight:700; }.reviewer-about > div p { margin:0; color:#68645d; font-size:.8rem; line-height:1.55; }
+.reviewer-account { border-top:1px solid #ded8cd; border-bottom:1px solid #ded8cd; }.reviewer-account summary { display:flex; justify-content:space-between; align-items:center; padding:16px 0; cursor:pointer; list-style:none; }.reviewer-account summary::-webkit-details-marker { display:none; }.reviewer-account summary strong,.reviewer-account summary small { display:block; }.reviewer-account summary small { margin-top:5px; color:#68645d; }.reviewer-account summary b { font-size:1.3rem; font-weight:400; }.reviewer-account p { color:#68645d; font-size:.75rem; }.reviewer-account code { display:block; margin-bottom:18px; overflow-wrap:anywhere; font-size:.75rem; }.reviewer-back { display:inline-block; margin-top:24px; color:#68645d; font-size:.8rem; text-decoration:none; }.reviewer-loading { padding:24px; background:#eeeae0; color:#68645d; }
+@media (max-width:600px) { .reviewer-page { padding:0 16px; }.reviewer-status { padding:22px; } }

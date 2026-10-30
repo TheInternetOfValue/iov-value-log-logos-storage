@@ -1,0 +1,94 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "IoV Value Log Operating Protocol",
+    "version": "1.4.3",
+    "description": "Private, approval-gated Value Log interface. Completed activities, future plans, weekly reviews, campaign outcomes, and current-day or historical cinematic reels are separate records."
+  },
+  "servers": [{ "url": "https://valuelog.theinternetofvalue.org" }],
+  "paths": {
+    "/api/v1/daily-context": {
+      "get": {
+        "operationId": "getDailyOperatingContext",
+        "summary": "Read the private context for one Asia/Kolkata day",
+        "description": "Read one explicit IST date. The response echoes requested_date and marks each completed owner-approved activity with reel_eligible and observer_confirmed; validation_pending may be eligible because protocol validation is separate from private reel evidence. Reading never writes.",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [{ "name": "date", "in": "query", "required": true, "schema": { "type": "string", "format": "date" } }],
+        "responses": { "200": { "description": "Owner-scoped daily context", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/DailyContextResponse" } } } } }
+      }
+    },
+    "/api/v1/weekly-reviews": {
+      "get": {
+        "operationId": "getWeeklyReviewPacket",
+        "summary": "Read the latest unfinalized private weekly evidence packet",
+        "description": "Use when Moses says Review my week. Reading never creates or changes a review. Exact aggregates cover the full packet; bounded daily activity examples are a selective qualitative drilldown and report omitted counts.",
+        "security": [{ "bearerAuth": [] }],
+        "responses": { "200": { "description": "Latest owner-scoped unfinalized packet, or null", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/WeeklyReviewPacketResponse" } } } } }
+      },
+      "post": {
+        "operationId": "saveWeeklyReview",
+        "summary": "Save an explicitly approved weekly review and reflection",
+        "description": "Call only after Moses supplies a reflection and explicitly approves the complete review and Monday-Friday plan.",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/WeeklyReview" } } } },
+        "responses": { "201": { "description": "Weekly review saved", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/SuccessResponse" } } } }, "409": { "description": "Packet superseded or idempotency conflict" }, "422": { "description": "Validation or approval failed" } }
+      }
+    },
+    "/api/v1/intakes": {
+      "post": {
+        "operationId": "submitValueLogDraft",
+        "summary": "Submit Moses's confirmed actual activities",
+        "description": "Call only after explicit activity approval. Every slice must have ended at or before the current IST time. Split only sleep/rest at IST midnight; keep other overnight activity continuous.",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Intake" } } } },
+        "responses": { "201": { "description": "Activities sent", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/SuccessResponse" } } } }, "409": { "description": "Timeline conflict" }, "422": { "description": "Validation failed" } }
+      }
+    },
+    "/api/v1/campaign-events": {
+      "post": {
+        "operationId": "recordCampaignEvent",
+        "summary": "Record explicitly approved campaign movement",
+        "description": "Call only after separate campaign approval. A meeting is not a campaign outcome.",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CampaignEvent" } } } },
+        "responses": { "201": { "description": "Campaign event saved", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/SuccessResponse" } } } }, "409": { "description": "Conflict" }, "422": { "description": "Validation failed" } }
+      }
+    },
+    "/api/v1/daily-plans": {
+      "post": {
+        "operationId": "saveDailyPlan",
+        "summary": "Save an explicitly approved schedule for future time",
+        "description": "Use only for blocks strictly after the current IST time or on a future IST date. A first approved plan can be saved directly: omit expected_plan_id. Read daily context and include its returned ID only when replacing an existing plan.",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/DailyPlan" } } } },
+        "responses": { "201": { "description": "Plan saved", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/SuccessResponse" } } } }, "409": { "description": "Conflict" }, "422": { "description": "Validation failed" } }
+      }
+    },
+    "/api/v1/cinematic-day-reels": {
+      "post": {
+        "operationId": "saveCinematicDayReel",
+        "summary": "Save an explicitly approved current-day or historical cinematic reel",
+        "description": "For today, evidence_cutoff_at is required and must be a non-future offset date-time on reel_date in Asia/Kolkata. A first historical reel may omit it. Include expected_reel_id when available. If omitted, the server resolves only a replacement whose immutable evidence cutoff advances beyond the current version, including after midnight; other replacements fail closed.",
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": { "required": true, "content": { "application/json": { "schema": { "$ref": "#/components/schemas/CinematicDayReel" } } } },
+        "responses": { "201": { "description": "Reel saved", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/SuccessResponse" } } } }, "409": { "description": "Idempotency or version conflict" }, "422": { "description": "Validation or evidence cutoff failed" } }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": { "bearerAuth": { "type": "http", "scheme": "bearer" } },
+    "schemas": {
+      "Approval": { "type": "object", "required": ["confirmed", "confirmation_text"], "properties": { "confirmed": { "type": "boolean", "enum": [true] }, "confirmation_text": { "type": "string", "minLength": 1, "maxLength": 500 } } },
+      "SuccessResponse": { "type": "object", "properties": { "ok": { "type": "boolean" } } },
+      "DailyContextResponse": { "type": "object", "properties": { "ok": { "type": "boolean" }, "requested_date": { "type": "string", "format": "date" }, "plan": { "type": "object" }, "campaign": { "type": "object" }, "cinematic_day_reel": { "type": "object" }, "activities": { "type": "array", "items": { "$ref": "#/components/schemas/DailyActivity" } } } },
+      "DailyActivity": { "type": "object", "properties": { "id": { "type": "string", "format": "uuid" }, "start_at": { "type": "string", "format": "date-time" }, "end_at": { "type": "string", "format": "date-time" }, "activity": { "type": "string" }, "status": { "type": "string" }, "observer_confirmed": { "type": "boolean" }, "reel_eligible": { "type": "boolean" }, "reel_eligibility_reason": { "type": "string" } } },
+      "WeeklyReviewPacketResponse": { "type": "object", "properties": { "ok": { "type": "boolean" }, "packet": { "type": ["object", "null"] } } },
+      "WeeklyPlanDay": { "type": "object", "required": ["date", "founder_critical_outcome", "ai_support", "recovery_protection", "low_energy_fallback"], "properties": { "date": { "type": "string", "format": "date" }, "founder_critical_outcome": { "type": "string", "maxLength": 700 }, "ai_support": { "type": "string", "maxLength": 700 }, "recovery_protection": { "type": "string", "maxLength": 500 }, "low_energy_fallback": { "type": "string", "maxLength": 700 } } },
+      "WeeklyReview": { "type": "object", "required": ["idempotency_key", "packet_id", "review_markdown", "monday_friday_plan", "owner_reflection", "approval"], "properties": { "idempotency_key": { "type": "string", "minLength": 12 }, "packet_id": { "type": "string", "format": "uuid" }, "review_markdown": { "type": "string", "minLength": 1, "maxLength": 16000 }, "monday_friday_plan": { "type": "array", "minItems": 5, "maxItems": 5, "items": { "$ref": "#/components/schemas/WeeklyPlanDay" } }, "owner_reflection": { "type": "string", "minLength": 1, "maxLength": 4000 }, "approval": { "$ref": "#/components/schemas/Approval" } } },
+      "Intake": { "type": "object", "required": ["idempotency_key", "timezone", "raw_narrative", "slices", "observer_confirmation"], "properties": { "idempotency_key": { "type": "string", "minLength": 12 }, "source_timestamp": { "type": "string", "format": "date-time" }, "parser_version": { "type": "string" }, "timezone": { "type": "string", "enum": ["Asia/Kolkata"] }, "raw_narrative": { "type": "string", "maxLength": 50000 }, "observer_confirmation": { "type": "object", "required": ["confirmed", "channel", "confirmation_text"], "properties": { "confirmed": { "type": "boolean", "enum": [true] }, "channel": { "type": "string", "enum": ["private_custom_gpt"] }, "confirmation_text": { "type": "string", "minLength": 1, "maxLength": 500 } } }, "slices": { "type": "array", "minItems": 1, "maxItems": 100, "items": { "type": "object", "required": ["start_at", "end_at", "timezone", "activity", "wellbeing_node", "slice_type", "community"], "properties": { "start_at": { "type": "string", "format": "date-time" }, "end_at": { "type": "string", "format": "date-time" }, "timezone": { "type": "string", "enum": ["Asia/Kolkata"] }, "activity": { "type": "string", "minLength": 1, "maxLength": 500 }, "proof": { "type": "string", "maxLength": 2000 }, "wellbeing_node": { "type": "string", "description": "The canonical Wellbecoming node.", "enum": ["Physiology", "Emotion", "Feeling", "Thought", "Habit", "Performance"] }, "slice_type": { "type": "string", "enum": ["non_performance", "performance"] }, "community": { "type": "string", "enum": ["house_of_bros", "iov", "gfe"] }, "sao_lane": { "type": "string", "enum": ["Learning", "Earning", "OrgBuilding"] }, "skill_level": { "type": "string", "enum": ["L0", "L1", "L2", "L3", "L4"] }, "impact_direction": { "type": "string", "enum": ["positive", "neutral", "negative"] }, "impact_intensity": { "type": "string", "enum": ["low", "medium", "high"] }, "confidence": { "type": "string", "enum": ["observed", "inferred", "uncertain"] } } } } } },
+      "CampaignEvent": { "type": "object", "required": ["idempotency_key", "campaign_id", "occurred_at", "summary", "movements", "approval"], "properties": { "idempotency_key": { "type": "string", "minLength": 12 }, "campaign_id": { "type": "string", "format": "uuid" }, "occurred_at": { "type": "string", "format": "date-time" }, "summary": { "type": "string", "minLength": 1, "maxLength": 500 }, "evidence_reference": { "type": "string", "maxLength": 1000 }, "canonical_slice_id": { "type": "string", "format": "uuid" }, "event_kind": { "type": "string", "enum": ["recorded", "refund", "correction"] }, "reverses_event_id": { "type": "string", "format": "uuid" }, "movements": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["campaign_metric_id", "delta"], "properties": { "campaign_metric_id": { "type": "string", "format": "uuid" }, "delta": { "type": "number" } } } }, "approval": { "$ref": "#/components/schemas/Approval" } } },
+      "DailyPlan": { "type": "object", "required": ["idempotency_key", "plan_date", "blocks", "approval"], "properties": { "idempotency_key": { "type": "string", "minLength": 12 }, "plan_date": { "type": "string", "format": "date" }, "expected_plan_id": { "type": "string", "format": "uuid" }, "daily_focus": { "type": "string", "maxLength": 240 }, "status": { "type": "string", "enum": ["planned", "changed", "cancelled"] }, "blocks": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["start_at", "end_at", "timezone", "founder_activity"], "properties": { "start_at": { "type": "string", "format": "date-time" }, "end_at": { "type": "string", "format": "date-time" }, "timezone": { "type": "string", "enum": ["Asia/Kolkata"] }, "responsible_party": { "type": "string", "enum": ["founder", "ai_codex", "shared"] }, "founder_activity": { "type": "string", "minLength": 1, "maxLength": 500 }, "ai_codex_activity": { "type": "string", "maxLength": 500 }, "intended_outcome": { "type": "string", "maxLength": 500 }, "context": { "type": "string", "maxLength": 160 }, "status": { "type": "string", "enum": ["planned", "changed", "cancelled"] } } } }, "approval": { "$ref": "#/components/schemas/Approval" } } },
+      "CinematicDayReel": { "type": "object", "required": ["idempotency_key", "reel_date", "title", "duration_seconds", "script_markdown", "approval"], "properties": { "idempotency_key": { "type": "string", "minLength": 12 }, "reel_date": { "type": "string", "format": "date" }, "evidence_cutoff_at": { "type": "string", "format": "date-time", "description": "Required for reel_date today. Must include an explicit offset, fall on reel_date in Asia/Kolkata, and not be in the future." }, "expected_reel_id": { "type": "string", "format": "uuid" }, "title": { "type": "string", "minLength": 1, "maxLength": 160 }, "duration_seconds": { "type": "integer", "minimum": 20, "maximum": 90 }, "script_markdown": { "type": "string", "minLength": 1, "maxLength": 12000 }, "approval": { "$ref": "#/components/schemas/Approval" } } }
+    }
+  }
+}

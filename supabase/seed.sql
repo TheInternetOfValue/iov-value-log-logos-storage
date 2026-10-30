@@ -1,0 +1,8 @@
+-- Run after the invited Moses account has authenticated.
+-- Replace the placeholders deliberately; do not commit personal credentials.
+--
+-- insert into public.members (id, email, display_name, timezone)
+-- values ('AUTH_USER_UUID', 'MOSES_EMAIL', 'Moses', 'Asia/Kolkata');
+--
+-- insert into public.wellbeing_baselines (owner_id, value, effective_at, rationale)
+-- values ('AUTH_USER_UUID', 550, now(), 'Manually reviewed pilot baseline');
